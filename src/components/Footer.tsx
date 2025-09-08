@@ -54,10 +54,10 @@ export const Footer = memo(() => (
                         href="#"
                         className="logo"
                     >
-                        Rathi Dental
+                        Dr. Karuna Skin Hair & Laser Center
                     </a>
                     <p className="footer-text">
-                        Your trusted <strong>dental clinic in Itahari</strong> for <strong>dental implants</strong>, <strong>braces</strong>, <strong>cosmetic dentistry</strong>, <strong>root canal</strong>, <strong>teeth whitening</strong>, <strong>orthodontics</strong>, and <strong>family dental care</strong> at an affordable price. Visit <strong>Rathi Dental Nepal</strong> for healthy smiles.
+                        Your trusted <strong>dermatology clinic in Dharan</strong> for <strong>laser hair removal, acne treatment, skin rejuvenation, anti-aging therapy, pigmentation removal, hair loss treatment,</strong>, and <strong>aesthetic care</strong> at an affordable price. Visit <strong>Dr. Karuna Skin Hair & Laser Center</strong> for healthy skin.
                     </p>
 
                     <div className="schedule">
@@ -65,8 +65,8 @@ export const Footer = memo(() => (
                             <IonIcon name="time-outline" />
                         </div>
                         <span className="span">
-                            Saturday - Sunday:<br />
-                            10:00 AM - 5:00 PM
+                            Sunday - Friday:<br />
+                            8:00 AM - 7:00 PM
                         </span>
                     </div>
 
@@ -90,7 +90,7 @@ export const Footer = memo(() => (
                             <IonIcon name="location-outline" />
                         </div>
                         <address className="item-text">
-                            Hatiya Line, Itahari-6 <br />
+                            Putali Line, Dharan-10 <br />
                             Sunsari, Nepal
                         </address>
                     </li>
@@ -100,10 +100,10 @@ export const Footer = memo(() => (
                             <IonIcon name="call-outline" />
                         </div>
                         <a
-                            href="tel:+97725582240"
+                            href="tel:+9779811316273"
                             className="footer-link"
                         >
-                            025-582240
+                            9811316273
                         </a>
                     </li>
 
@@ -112,10 +112,10 @@ export const Footer = memo(() => (
                             <IonIcon name="mail-outline" />
                         </div>
                         <a
-                            href="mailto:help@example.com"
+                            href="mailto:drkaruna.clinic@gmail.com"
                             className="footer-link"
                         >
-                            rathidental.ith@gmail.com
+                            drkaruna.clinic@gmail.com
                         </a>
                     </li>
 
@@ -126,7 +126,7 @@ export const Footer = memo(() => (
         <div className="footer-bottom">
             <div className="custom-container">
                 <p className="copyright">
-                    &copy; 2025 All Rights Reserved by Rathi Dental.
+                    &copy; 2025 All Rights Reserved by Dr. Karuna Skin Hair & Laser Center.
                 </p>
                 <ul className="social-list">
 
