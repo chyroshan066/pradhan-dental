@@ -85,11 +85,10 @@ export const Intro = memo(({
                         <p className="section-subtitle">Our Story</p>
                         <h2 className="h2 section-title">
                             Experience Excellence In <br />
-                            Dental Care
+                            Skin, Hair & Laser Care
                         </h2>
                         <p className="section-text">
-                            Watch our journey of providing world-class dental treatments with
-                            cutting-edge technology and compassionate care in the heart of Itahari.
+                            Watch our journey of providing world-class skin, hair & laser treatments with cutting-edge technology and compassionate care in the heart of Dharan.
                         </p>
                     </div>
 

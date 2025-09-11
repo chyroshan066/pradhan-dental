@@ -45,20 +45,20 @@ export const Header = memo(() => {
                         <li className="contact-item">
                             <IonIcon name="mail-outline" />
                             <a
-                                href="mailto:rathidental.ith@gmail.com"
+                                href="mailto:drkaruna.clinic@gmail.com"
                                 className="contact-link"
                             >
-                                rathidental.ith@gmail.com
+                                drkaruna.clinic@gmail.com
                             </a>
                         </li>
 
                         <li className="contact-item">
                             <IonIcon name="call-outline" />
                             <a
-                                href="tel:+97725582240"
+                                href="tel:+9779811316273"
                                 className="contact-link"
                             >
-                                025-582240
+                                9811316273
                             </a>
                         </li>
 
@@ -86,9 +86,9 @@ export const Header = memo(() => {
                         href="/"
                         className="logo"
                     >
-                        {/* Rathi Dental */}
+                        {/* Karuna Skin Clinic */}
                         <Image
-                            width={120}
+                            width={200}
                             height={80}
                             src="/images/logo.webp"
                             alt="logo"

@@ -19,11 +19,11 @@ export const Review = memo(() => {
             <p
               className="section-text"
               style={{
-                color: 'var(--sonic-silver)',
+                color: 'var(--warm-taupe)',
                 fontSize: 'var(--fontSize-6)',
                 marginBlockEnd: '40px'
               }}>
-              Help others discover our exceptional dental care by sharing your experience on Google Reviews
+              Help others discover our exceptional skin, hair & laser treatments by sharing your experience on Google Reviews
             </p>
           </div>
 
@@ -89,7 +89,7 @@ export const Review = memo(() => {
 
           {/* Supporting Text */}
           <p className="review-support-text">
-            It only takes 2 minutes and helps other patients find quality dental care
+            It only takes 2 minutes and helps other patients find quality skin care
           </p>
         </div>
       </div>
@@ -170,7 +170,7 @@ export const Review = memo(() => {
           transform: translateY(0);
         }
         .review-support-text {
-          color: var(--sonic-silver);
+          color: var(--warm-taupe);
           font-size: var(--fontSize-7);
           font-style: italic;
           opacity: 0.8;

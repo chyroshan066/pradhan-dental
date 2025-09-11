@@ -46,7 +46,7 @@ export default function Gallery({
   const visibleMediaItems = mediaItems.slice(0, loadedItems);
 
   const handleLoadMore = () => {
-    setLoadedItems(prev => Math.min(prev + 6, mediaItems.length));
+    setLoadedItems(prev => Math.min(prev + 12, mediaItems.length));
   };
 
   const openLightbox = (index: number) => {
@@ -154,13 +154,12 @@ export default function Gallery({
           <div className="text-center">
             <p className="section-subtitle">Our Clinic</p>
             <h2 className="h2 section-title">
-              Explore Our Dental
+              Explore Our Treatment Results
               <br />
               Gallery
             </h2>
             <p className="section-text">
-              Take a virtual tour of our modern dental facility, featuring state-of-the-art equipment,
-              comfortable treatment rooms, and a welcoming environment designed with your comfort in mind.
+              Take a virtual tour of our advanced dermatology center, featuring cutting-edge laser technology, luxurious treatment suites, and a serene environment designed with your comfort and privacy in mind.
             </p>
           </div>
 
@@ -442,13 +441,13 @@ export default function Gallery({
         .stat-number {
           font-size: var(--fontSize-4);
           font-weight: var(--weight-700);
-          color: var(--deep-purple-1);
+          color: var(--dark-brown-1);
           line-height: 1;
         }
 
         .stat-label {
           font-size: var(--fontSize-7);
-          color: var(--sonic-silver);
+          color: var(--warm-taupe);
           margin-top: 5px;
         }
 
@@ -484,7 +483,7 @@ export default function Gallery({
           display: flex;
           align-items: center;
           justify-content: center;
-          color: var(--royal-purple);
+          color: var(--deep-burgundy);
           font-size: 18px;
           backdrop-filter: blur(10px);
           opacity: 0;
@@ -522,18 +521,18 @@ export default function Gallery({
         .gallery-empty {
           text-align: center;
           padding: 80px 20px;
-          color: var(--sonic-silver);
+          color: var(--warm-taupe);
         }
 
         .empty-icon {
           font-size: 64px;
-          color: var(--light-gray);
+          color: var(--light-warm-beige);
           margin-bottom: 20px;
         }
 
         .empty-title {
           font-size: var(--fontSize-4);
-          color: var(--deep-purple-1);
+          color: var(--dark-brown-1);
           margin-bottom: 15px;
         }
 
@@ -679,7 +678,7 @@ export default function Gallery({
           appearance: none;
           width: 14px;
           height: 14px;
-          background: var(--royal-purple);
+          background: var(--deep-burgundy);
           border-radius: 50%;
           cursor: pointer;
         }
@@ -687,7 +686,7 @@ export default function Gallery({
         .volume-slider::-moz-range-thumb {
           width: 14px;
           height: 14px;
-          background: var(--royal-purple);
+          background: var(--deep-burgundy);
           border-radius: 50%;
           cursor: pointer;
           border: none;
@@ -710,13 +709,13 @@ export default function Gallery({
 
         .lightbox-title {
           font-size: var(--fontSize-5);
-          color: var(--deep-purple-1);
+          color: var(--dark-brown-1);
           margin: 0;
           font-weight: var(--weight-600);
         }
 
         .lightbox-description {
-          color: var(--sonic-silver);
+          color: var(--warm-taupe);
           line-height: 1.6;
           margin: 0;
           font-size: 14px;
@@ -742,9 +741,9 @@ export default function Gallery({
         }
 
         .image-counter {
-          color: var(--royal-purple);
+          color: var(--deep-burgundy);
           font-weight: var(--weight-600);
-          background: rgba(var(--royal-purple-rgb, 88, 56, 255), 0.1);
+          background: rgba(var(--deep-burgundy-rgb, 88, 56, 255), 0.1);
           padding: 8px 16px;
           border-radius: 20px;
           font-size: 13px;
@@ -931,7 +930,7 @@ export default function Gallery({
         .video-control-btn:focus,
         .lightbox-close:focus,
         .lightbox-nav:focus {
-          outline: 2px solid var(--royal-purple);
+          outline: 2px solid var(--deep-burgundy);
           outline-offset: 2px;
         }
 

@@ -72,8 +72,8 @@ export const Maps: React.FC = () => {
 
     // Dental clinic location (you can change these coordinates)
     const clinicLocation: ClinicLocation = {
-        lat: 26.66187,
-        lng: 87.27682,
+        lat: 26.81233,
+        lng: 87.28107,
         name: "Basuki Dental Clinic",
         address: "Biratnagar, Morang, Nepal"
     };
@@ -231,7 +231,7 @@ export const Maps: React.FC = () => {
                     overflow: 'hidden',
                     boxShadow: 'var(--shadow-3)',
                     backgroundColor: 'var(--white)',
-                    border: '2px solid var(--light-gray)'
+                    border: '2px solid var(--light-warm-beige)'
                 }}>
                     {/* Loading State */}
                     {!isLoaded && (
@@ -240,14 +240,14 @@ export const Maps: React.FC = () => {
                             display: 'flex',
                             alignItems: 'center',
                             justifyContent: 'center',
-                            backgroundColor: 'var(--cultured)',
-                            color: 'var(--sonic-silver)'
+                            backgroundColor: 'var(--warm-cultured)',
+                            color: 'var(--warm-taupe)'
                         }}>
                             <div style={{ textAlign: 'center' }}>
                                 <div style={{
                                     width: '40px',
                                     height: '40px',
-                                    border: '4px solid var(--light-gray)',
+                                    border: '4px solid var(--light-warm-beige)',
                                     borderTop: '4px solid var(--royal-purple)',
                                     borderRadius: '50%',
                                     animation: 'spin 1s linear infinite',
@@ -288,7 +288,7 @@ export const Maps: React.FC = () => {
         
         .leaflet-control-zoom a {
           background-color: var(--white) !important;
-          color: var(--deep-purple-1) !important;
+          color: var(--dark-brown-1) !important;
           border: none !important;
           border-radius: var(--radius-4) !important;
           font-weight: var(--weight-700) !important;

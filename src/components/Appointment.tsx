@@ -23,7 +23,7 @@ const initialValues: AppointmentFormData = {
     phone: "",
     gender: "Male",
     date: "",
-    time: "09:00am",
+    time: "08:00am",
     message: "",
 };
 
@@ -135,7 +135,7 @@ export const Appintment = memo(() => {
                     >
                         <h2 className="headline-1 text-center">Book Appointment</h2>
                         <p className="form-text text-center">
-                            Booking request <a href="tel:+977025582240" className="link">025-582240 </a>
+                            Booking request <a href="tel:+9779811316273" className="link">9811316273 </a>
                             or fill out the appointment form
                         </p>
                         <div className="input-wrapper">
@@ -229,9 +229,9 @@ export const Appintment = memo(() => {
                                     {[...Array(4)].map((_, index) => (
                                         <option
                                             key={index}
-                                            value={`${index < 1 ? `0${9 + index}` : 9 + index}:00am`}
+                                            value={`${index < 2 ? `0${8 + index}` : 8 + index}:00am`}
                                         >
-                                            {index < 1 ? `0${9 + index}` : 9 + index} : 00 am
+                                            {index < 2 ? `0${8 + index}` : 8 + index} : 00 am
                                         </option>
                                     ))}
 
@@ -278,21 +278,21 @@ export const Appintment = memo(() => {
                         <h2 className="headline-1 text-center">Contact Us</h2>
                         <p className="contact-label">Booking Request</p>
                         <a
-                            href="tel:+977025582240"
+                            href="tel:+9779811316273"
                             className="body-1 contact-number hover-underline"
                         >
-                            025-582240
+                            9811316273
                         </a>
                         <div className="separator"></div>
                         <p className="contact-label">Location</p>
                         <address className="body-4">
-                            Hatiya Line,  <br />
-                            Itahari-6, Nepal
+                            Putali Line,  <br />
+                            Dharan-10, Nepal
                         </address>
                         <p className="contact-label">Daily</p>
                         <p className="body-4">
-                            Monday to Sunday <br />
-                            9.00 am - 7.00pm
+                            Sunday to Friday <br />
+                            8.00 am - 7.00pm
                         </p>
                     </div>
                 </div>

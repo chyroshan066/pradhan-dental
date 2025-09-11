@@ -4,99 +4,162 @@ export const SERVICES: Services[] = [
     {
         id: 1,
         imgSrc: "/images/service-icons/service-icon-1.webp",
-        name: "Dental Checkup",
-        text: "Routine examination and cleaning to maintain healthy teeth and gums.",
-        href: "dental-checkup"
+        name: "Mole Removal",
+        text: "Safe surgical removal of moles for cosmetic or medical reasons.",
+        href: "mole-removal"
     },
     {
         id: 2,
         imgSrc: "/images/service-icons/service-icon-2.webp",
-        name: "X-RAY",
-        text: "Advanced imaging to detect hidden dental problems and plan precise treatments.",
-        href: "x-ray"
+        name: "Wart Removal",
+        text: "Effective treatment to remove viral warts using various medical techniques.",
+        href: "wart-removal"
     },
     {
         id: 3,
         imgSrc: "/images/service-icons/service-icon-3.webp",
-        name: "Teeth Whitening",
-        text: "Professional brightening treatment to remove stains and enhance your smile.",
-        href: "teeth-whitening"
+        name: "Skin Tag Removal",
+        text: "Quick, painless removal of benign skin tags for smoother skin appearance.",
+        href: "skin-tag-removal"
     },
     {
         id: 4,
         imgSrc: "/images/service-icons/service-icon-4.webp",
-        name: "Gingivitis Periodontitis",
-        text: "Specialized treatment for gum disease to restore healthy gums and prevent tooth loss.",
-        href: "gingivitis-periodontitis"
+        name: "Corn Removal",
+        text: "Professional removal of painful corns to restore foot comfort and mobility.",
+        href: "corn-removal"
     },
     {
         id: 5,
         imgSrc: "/images/service-icons/service-icon-5.webp",
-        name: "Composite Restoration",
-        text: "Tooth-colored fillings to repair cavities and restore natural appearance.",
-        href: "composite-restoration"
+        name: "Split Ear Lobe Repair",
+        text: "Surgical repair of torn or stretched earlobes for natural appearance restoration.",
+        href: "split-ear-lobe-repair"
     },
     {
         id: 6,
         imgSrc: "/images/service-icons/service-icon-6.webp",
-        name: "RCT",
-        text: "Root canal treatment to save infected teeth and eliminate pain.",
-        href: "rct"
+        name: "Medipeel",
+        text: "Professional chemical peel treatment to rejuvenate and improve skin texture.",
+        href: "medipeel"
     },
     {
         id: 7,
         imgSrc: "/images/service-icons/service-icon-7.webp",
-        name: "Oral Surgery",
-        text: "Surgical procedures for tooth extraction and complex dental treatments.",
-        href: "oral-surgery"
+        name: "PRP Treatment",
+        text: "Platelet-rich plasma injections to stimulate natural hair growth and thickness.",
+        href: "prp-treatment"
     },
     {
         id: 8,
         imgSrc: "/images/service-icons/service-icon-8.webp",
-        name: "CD, RPD, FPD",
-        text: "Custom dentures and bridges to replace missing teeth and restore function.",
-        href: "cd-rpd-fpd"
+        name: "GFC Treatment",
+        text: "Growth factor concentrate therapy to promote natural hair regrowth and density.",
+        href: "gfc-treatment"
     },
     {
         id: 9,
         imgSrc: "/images/service-icons/service-icon-9.webp",
-        name: "Extraction",
-        text: "Safe tooth removal procedures for damaged or problematic teeth.",
-        href: "extraction"
+        name: "Acne Scar Treatment",
+        text: "Advanced treatments to reduce acne scars and restore smooth skin texture.",
+        href: "acne-scar-treatment"
     },
     {
         id: 10,
         imgSrc: "/images/service-icons/service-icon-10.webp",
-        name: "Orthodontic Treatment",
-        text: "Braces and aligners to straighten teeth and correct bite alignment.",
-        href: "orthodontic-treatment"
+        name: "Botox",
+        text: "Injectable treatment to reduce wrinkles and achieve smoother facial appearance.",
+        href: "botox"
     },
     {
         id: 11,
         imgSrc: "/images/service-icons/service-icon-11.webp",
-        name: "Dental Crown",
-        text: "Custom caps to protect and restore damaged or weakened teeth.",
-        href: "dental-crown"
+        name: "Fillers",
+        text: "Injectable treatments to restore facial volume and enhance natural contours.",
+        href: "fillers"
     },
     {
         id: 12,
         imgSrc: "/images/service-icons/service-icon-12.webp",
-        name: "Dental Camp",
-        text: "Community outreach providing free dental checkups and health education.",
-        href: "dental-camp"
+        name: "Thread Lift",
+        text: "Non-surgical lifting procedure using threads to tighten and rejuvenate skin.",
+        href: "thread-lift"
     },
     {
         id: 13,
         imgSrc: "/images/service-icons/service-icon-13.webp",
-        name: "Halitosis Treatment",
-        text: "Specialized care to eliminate bad breath and restore fresh confidence.",
-        href: "halitosis-treatment"
+        name: "Skin Boosters Treatment",
+        text: "Hydrating injections to improve skin texture, elasticity, and natural glow.",
+        href: "skin-boosters-treatment"
     },
     {
         id: 14,
         imgSrc: "/images/service-icons/service-icon-14.webp",
-        name: "Dental Implant",
-        text: "Permanent tooth replacement that looks, feels, and functions like your natural teeth.",
-        href: "dental-implant"
+        name: "Laser Hair Reduction",
+        text: "Advanced laser technology to permanently reduce unwanted hair growth safely.",
+        href: "laser-hair-reduction"
+    },
+    {
+        id: 15,
+        imgSrc: "/images/service-icons/service-icon-15.webp",
+        name: "Laser Tattoo Removal",
+        text: "Laser technology to safely fade and remove unwanted tattoos effectively.",
+        href: "laser-tattoo-removal"
+    },
+    {
+        id: 16,
+        imgSrc: "/images/service-icons/service-icon-16.webp",
+        name: "Meso Facial",
+        text: "Micro-injections of vitamins and nutrients to revitalize and hydrate skin.",
+        href: "meso-facial"
+    },
+    {
+        id: 17,
+        imgSrc: "/images/service-icons/service-icon-17.webp",
+        name: "Medi Facial",
+        text: "Medical-grade facial treatment to address specific skin concerns and conditions.",
+        href: "medi-facial"
+    },
+    {
+        id: 18,
+        imgSrc: "/images/service-icons/service-icon-18.webp",
+        name: "Oxy-Hydra Facial",
+        text: "Deep cleansing and hydrating facial treatment using oxygen and water therapy.",
+        href: "oxy-hydra-facial"
+    },
+    {
+        id: 19,
+        imgSrc: "/images/service-icons/service-icon-19.webp",
+        name: "Oxy-Geneo Facial",
+        text: "Advanced 3-in-1 facial combining exfoliation, oxygenation, and nourishing infusion.",
+        href: "oxy-geneo-facial"
+    },
+    {
+        id: 20,
+        imgSrc: "/images/service-icons/service-icon-20.webp",
+        name: "Laser Facial",
+        text: "Laser technology treatment to improve skin texture and reduce imperfections.",
+        href: "laser-facial"
+    },
+    {
+        id: 21,
+        imgSrc: "/images/service-icons/service-icon-21.webp",
+        name: "Photo Facial",
+        text: "Light-based therapy to treat pigmentation, redness, and improve skin tone.",
+        href: "photo-facial"
+    },
+    {
+        id: 22,
+        imgSrc: "/images/service-icons/service-icon-22.webp",
+        name: "Vampire Facial",
+        text: "Platelet-rich plasma therapy using your own blood to rejuvenate skin.",
+        href: "vampire-facial"
+    },
+    {
+        id: 22,
+        imgSrc: "/images/service-icons/service-icon-23.webp",
+        name: "Hair Transplant",
+        text: "Surgical procedure to relocate hair follicles for permanent hair restoration.",
+        href: "hair-transplant"
     },
 ];
