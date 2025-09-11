@@ -3,14 +3,14 @@ import { MediaItem } from "@/types";
 export const MEDIA_ITEMS: MediaItem[] = [
     {
         id: 1,
-        src: "/images/media/gallery/g1.webp",
+        src: "/images/media/images/g1.webp",
         alt: "Meet Dr. Karuna Singh: Expert in Skin, Hair & Laser Treatments",
         title: "Meet Dr. Karuna Singh: Expert in Skin, Hair & Laser Treatments",
         type: "image"
     },
     {
         id: 2,
-        src: "/images/media/videos/v1.webm",
+        src: "/images/media/images/v1.webm",
         alt: "Professional Mole Removal at Dr. Karuna Skin Center",
         title: "Professional Mole Removal at Dr. Karuna Skin Center",
         type: "video",
@@ -18,28 +18,28 @@ export const MEDIA_ITEMS: MediaItem[] = [
     },
     {
         id: 3,
-        src: "/images/media/gallery/g2.webp",
+        src: "/images/media/images/g2.webp",
         alt: "Meet Dr. Karuna Singh: Expert in Skin, Hair & Laser Treatments",
         title: "Meet Dr. Karuna Singh: Expert in Skin, Hair & Laser Treatments",
         type: "image"
     },
     {
         id: 4,
-        src: "/images/media/gallery/g3.webp",
+        src: "/images/media/images/g3.webp",
         alt: "Meet Dr. Karuna Singh: Expert in Skin, Hair & Laser Treatments",
         title: "Meet Dr. Karuna Singh: Expert in Skin, Hair & Laser Treatments",
         type: "image"
     },
     {
         id: 5,
-        src: "/images/media/gallery/g4.webp",
+        src: "/images/media/images/g4.webp",
         alt: "Successful Mole Removal: Post-Procedure Results",
         title: "Successful Mole Removal: Post-Procedure Results",
         type: "image"
     },
     {
         id: 6,
-        src: "/images/media/gallery/g5.webp",
+        src: "/images/media/images/g5.webp",
         alt: "Successful Cyst Removal: Post-Procedure Results",
         title: "Successful Cyst Removal: Post-Procedure Results",
         type: "image"
@@ -53,14 +53,14 @@ export const MEDIA_ITEMS: MediaItem[] = [
     },
     {
         id: 8,
-        src: "/images/media/gallery/g6.webp",
+        src: "/images/media/images/g6.webp",
         alt: "Meet Dr. Karuna Singh: Expert in Skin, Hair & Laser Treatments",
         title: "Meet Dr. Karuna Singh: Expert in Skin, Hair & Laser Treatments",
         type: "image"
     },
     {
         id: 9,
-        src: "/images/media/gallery/g7.webp",
+        src: "/images/media/images/g7.webp",
         alt: "Complete Chin Cyst Removal - Specimen Collection",
         title: "Complete Chin Cyst Removal - Specimen Collection",
         type: "image"
@@ -74,14 +74,14 @@ export const MEDIA_ITEMS: MediaItem[] = [
     },
     {
         id: 11,
-        src: "/images/media/gallery/g8.webp",
+        src: "/images/media/images/g8.webp",
         alt: "Successfully Removed Mole - Post-Excision Specimen",
         title: "Successfully Removed Mole - Post-Excision Specimen",
         type: "image"
     },
     {
         id: 12,
-        src: "/images/media/gallery/g9.webp",
+        src: "/images/media/images/g9.webp",
         alt: "Cyst Removal Procedure - Patient Positioning",
         title: "Cyst Removal Procedure - Patient Positioning",
         type: "image"
