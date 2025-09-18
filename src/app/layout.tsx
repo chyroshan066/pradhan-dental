@@ -100,7 +100,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Dr. Karuna Skin Hair & Laser Center" }],
   creator: "Dr. Karuna Skin Hair & Laser Center",
   publisher: "Dr. Karuna Skin Hair & Laser Center",
-  metadataBase: new URL("https://karunaskinclinic.com.np/"),
+  metadataBase: new URL("https:///karuna-clinic.vercel.app/"),
   alternates: {
     canonical: "/",
   },
@@ -153,7 +153,7 @@ export const metadata: Metadata = {
     description: "Dr. Karuna Skin Hair & Laser Center offers comprehensive skin, hair and laser treatments in Dharan, Nepal. Expert dermatologists providing treatments such as laser hair removal, acne treatment, anti-aging therapy, skin rejuvenation, hair loss treatment, pigmentation removal, and advanced aesthetic procedures in a modern, comfortable clinic.",
     type: "website",
     locale: "en_US",
-    url: "https://karunaskinclinic.com.np/",
+    url: "https:///karuna-clinic.vercel.app/",
     siteName: "Dr. Karuna Skin Hair & Laser Center",
     images: [
       {

@@ -125,8 +125,7 @@ export const Hero = memo(() => {
                 <div className="hero-content">
                     <p className="section-subtitle">Welcome To Karuna Skin Clinic</p>
                     <h1 className="h25 hero-title">We Are The Best Skin Care Service Provider In Town</h1>
-                    {/* <h1 className="h1 hero-title">We Are Best Dental Service</h1> */}
-                    <p className="hero-text">
+                    <p className="text-[var(--warm-beige_50] mb-10 leading-[1.45] text-[length:var(--fontSize-6)]">
                         Transforming skin and confidence with precision, care, and cutting-edge laser technology. Experience results that exceed expectations.
                     </p>
                     <form
@@ -156,8 +155,10 @@ export const Hero = memo(() => {
                 <figure className="hero-banner">
                     <Image
                         src="/images/hero-banner.webp"
-                        width={587}
-                        height={839}
+                        width={400}
+                        height={562}
+                        // width={587}
+                        // height={839}
                         alt="hero banner"
                         className="w-fill"
                     />

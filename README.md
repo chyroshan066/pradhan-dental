@@ -1,16 +1,16 @@
-# Rathi Dental Clinic Website
+# Dr. Karuna Skin, Hair and Laser Treatment Center Website
 
-A comprehensive, responsive dental website built with Next.js and TypeScript, featuring online appointment booking, service showcases, patient testimonials, and seamless customer engagement tools designed to enhance the dental practice experience.
+A comprehensive, responsive dermatology clinic website built with Next.js and TypeScript, featuring online appointment booking, treatment showcases, patient testimonials, and seamless customer engagement tools designed to enhance the skincare and aesthetic treatment experience.
 
 ## 🍽️ About
 
-Rathi Dental is a premium dental practice website designed to provide patients with an exceptional online experience. The site features elegant design and intuitive navigation to showcase comprehensive dental services and facilitate seamless appointment booking.
+Dr. Karuna Skin, Hair and Laser Treatment Center is a premium dermatology and aesthetic practice website designed to provide patients with an exceptional online experience. The site features elegant design and intuitive navigation to showcase comprehensive skin, hair, and laser treatments while facilitating seamless appointment booking.
 
 ## ✨ Features
 
 - **Responsive Design** - Optimized for all devices (desktop, tablet, mobile)
 - **Online Appointments** - Easy appointment booking system with form validation
-- **Menu Showcase** - Beautiful presentation of dental services 
+- **Menu Showcase** - Beautiful presentation of dermatological and aesthetic services
 - **Contact Information** - Easy-to-find location, hours, and contact details
 - **Performance Optimized** - Fast loading times and smooth user experience
 - **SEO Friendly** - Optimized for search engines and local discovery
@@ -68,7 +68,7 @@ npm run start
 ## 🏗️ Project Structure
 
 ```
-rathi-dental/
+karuna-clinic/
 ├── .github/
 ├── public/
 │   ├── fonts/
@@ -81,7 +81,7 @@ rathi-dental/
 │   │   │   ├── ...
 │   │   │   └── Roboto-Regular.woff2
 │   ├── images/
-│   │   ├── dentists/
+│   │   ├── media/
 │   │   ├── ...
 │   │   └── service-banner.webp
 │   └── favicon_io/
@@ -102,7 +102,7 @@ rathi-dental/
 │   │   ├── ...
 │   │   └── Testimonial.tsx
 │   ├── constants/
-│   │   ├── doctors.ts
+│   │   ├── gallery.ts
 │   │   ├── ...
 │   │   └── testimonials.ts
 │   ├── middlewares/
@@ -121,19 +121,20 @@ rathi-dental/
 ├── package.json
 ├── postcss.config.mjs
 ├── tsconfig.json
+├── LICENSE
 └── README.md
 ```
 
 ## 🎨 Key Components
 
-### Reservation System
+### Appointment System
 - Form validation with error handling
 - Date selection with future date enforcement
 - Real-time form feedback
 - Mobile-optimized interface
 
 ### Service Display
-- Categorized dental services
+- Categorized dermatological and aesthetic services
 
 ## 📱 Responsive Design
 
@@ -147,7 +148,7 @@ The website is fully responsive and tested on:
 
 ### Custom Domain Setup
 
-The website is configured for the custom domain `rathidentalclinic.com`:
+The website is configured for the custom domain `karunaskinclinic.com.np`:
 
 1. DNS records are configured for the domain
 2. SSL certificates are automatically provisioned
@@ -185,7 +186,7 @@ npm run type-check
 
 The website is deployed on Vercel with automatic deployments:
 
-- **Production**: https://rathidentalclinic.com
+- **Production**: https://karunaskinclinic.com.np
 - **Preview**: Automatic preview deployments for pull requests
 
 ### Manual Deployment
@@ -198,8 +199,8 @@ npm run export  # if using static export
 ## 📞 Support & Maintenance
 
 ### Client Information
-- **Dental Clinic**: Rathi Dental
-- **Domain**: rathidentalclinic.com
+- **Dermatology Clinic**: Dr. Karuna Skin, Hair and Laser Treatment Center
+- **Domain**: karunaskinclinic.com.np
 - **Deployment**: Vercel
 
 ### Developer Contact
@@ -207,7 +208,7 @@ For technical support or website updates, contact the developer.
 
 ## 📝 License
 
-This project is proprietary software developed specifically for Rathi Dental Clinic.
+This project is proprietary software developed specifically for Dr. Karuna Skin, Hair and Laser Treatment Center.
 
 ---
 

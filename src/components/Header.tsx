@@ -82,18 +82,29 @@ export const Header = memo(() => {
             >
                 <div className="custom-container">
 
-                    <Link
-                        href="/"
-                        className="logo"
-                    >
-                        {/* Karuna Skin Clinic */}
-                        <Image
-                            width={200}
-                            height={80}
-                            src="/images/logo.webp"
-                            alt="logo"
-                        />
-                    </Link>
+                    <div className="flex items-center gap-3">
+                        <Link
+                            href="/"
+                            className="logo"
+                        >
+                            <Image
+                                width={40}
+                                height={55}
+                                src="/images/logo.webp"
+                                alt="logo"
+                            />
+                        </Link>
+
+                        {/* Logo Text */}
+                        <div className="flex flex-col justify-center">
+                            <div className="logo-text-top font-bold leading-tight">
+                                Dr. Karuna&apos;s
+                            </div>
+                            <div className="logo-text-bottom leading-tight">
+                                Skin Hair & Laser Centre
+                            </div>
+                        </div>
+                    </div>
 
                     <nav
                         className={`navbar custom-container ${isNavActive ? 'active' : ''}`}

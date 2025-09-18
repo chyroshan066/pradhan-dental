@@ -8,12 +8,46 @@ interface IntroProps {
 }
 
 export const Intro = memo(({
-    videoUrl = "/images/media/videos/v1.webm"
+    videoUrl = "/images/media/videos/intro.webm"
 }: IntroProps) => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [hasUserInteracted, setHasUserInteracted] = useState(false);
+    const [videoDuration, setVideoDuration] = useState<string>('0:00');
     const videoRef = useRef<HTMLVideoElement>(null);
+
+    const formatDuration = (seconds: number): string => {
+        const minutes = Math.floor(seconds / 60);
+        const remainingSeconds = Math.floor(seconds % 60);
+        return `${minutes}:${remainingSeconds.toString().padStart(2, '0')}`;
+    };
+
+    useEffect(() => {
+        const handleLoadedMetadata = () => {
+            if (videoRef.current) {
+                const duration = videoRef.current.duration;
+                if (!isNaN(duration) && isFinite(duration)) {
+                    setVideoDuration(formatDuration(duration));
+                }
+            }
+        };
+
+        const videoElement = videoRef.current;
+        if (videoElement) {
+            videoElement.addEventListener('loadedmetadata', handleLoadedMetadata);
+
+            // If metadata is already loaded, get duration immediately
+            if (videoElement.readyState >= 1) {
+                handleLoadedMetadata();
+            }
+        }
+
+        return () => {
+            if (videoElement) {
+                videoElement.removeEventListener('loadedmetadata', handleLoadedMetadata);
+            }
+        };
+    }, [videoUrl]); // Re-run when video URL changes
 
     useEffect(() => {
         const playVideo = async () => {
@@ -135,11 +169,11 @@ export const Intro = memo(({
                                         )}
                                     </button>
 
-                                    {/* Video Info Badge */}
+                                    {/* Video Info Badge - Modified to use dynamic duration */}
                                     <div className="video-info-badge">
                                         <div className="badge-content">
                                             <span>{hasUserInteracted ? "Watch Demo" : "Click for Sound"}</span>
-                                            <span className="badge-duration">0:50</span>
+                                            <span className="badge-duration">{videoDuration}</span>
                                         </div>
                                     </div>
                                 </div>

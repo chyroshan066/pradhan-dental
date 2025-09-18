@@ -156,7 +156,7 @@ export const SERVICES: Services[] = [
         href: "vampire-facial"
     },
     {
-        id: 22,
+        id: 23,
         imgSrc: "/images/service-icons/service-icon-23.webp",
         name: "Hair Transplant",
         text: "Surgical procedure to relocate hair follicles for permanent hair restoration.",

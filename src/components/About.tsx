@@ -22,7 +22,7 @@ export const About = memo(() => (
 
             <div>
                 <p className="section-subtitle">About Us</p>
-                <h2 className="h2 section-title">We Care For Your Dental Health</h2>
+                <h2 className="h2 section-title">We Care For Your Skin & Beauty</h2>
                 <p className="section-text section-text-1">
                     Welcome to <b>Dr. Karuna Skin Hair & Laser Center</b>, your trusted <b>dermatology clinic in Dharan</b> located at Putali Line, Dharan-10, Sunsari, Nepal. With the motto <i>“Expert Dermatologist, Advanced Technology and Affordable Care”</i>, we are committed to providing high-quality <b>skin and aesthetic care in Nepal</b> for every individual.
                 </p>
