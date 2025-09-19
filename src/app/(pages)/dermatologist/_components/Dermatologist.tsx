@@ -173,14 +173,14 @@ export const Dermatologist = memo(() => {
                                             margin: '0'
                                         }}>
                                         B.P. KOIRALA INSTITUTE OF HEALTH SCIENCES<br />
-                                        {/* <span style={{
+                                        <span style={{
                                             fontSize: '1.2rem',
                                             opacity: '0.9',
                                             fontWeight: '500',
                                             color: 'var(--champagne-gold)'
                                         }}>
-                                            NMC No: 34407
-                                        </span> */}
+                                            NMC No: 10003
+                                        </span>
                                     </p>
                                 </div>
                             </div>

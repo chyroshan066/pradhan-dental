@@ -9,14 +9,16 @@ export const CallToAction = memo(() => (
     >
         <div className="custom-container">
 
-            <figure className="cta-banner">
+            <figure className="cta-banner relative h-166 overflow-hidden bg-light-warm-beige flex items-center justify-center">
+                {/* MODIFIED: Changed from fill to intrinsic sizing with object-contain to preserve aspect ratio */}
                 <Image
                     src="/images/cta-banner.webp"
-                    width={1056}
-                    height={1076}
+                    width={800} // Add appropriate width based on your image
+                    height={400} // Add appropriate height based on your image  
                     loading="lazy"
                     alt="cta banner"
-                    className="w-fill"
+                    className="object-contain max-h-full max-w-full"
+                    priority={false}
                 />
             </figure>
 
@@ -28,7 +30,6 @@ export const CallToAction = memo(() => (
                     btnLink={"#contact"}
                     btnText={"Book appointment"}
                 />
-
             </div>
         </div>
     </section>

@@ -1163,12 +1163,6 @@
   .cta { 
     padding-block: 0; 
   }
-  .cta .custom-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: flex-end;
-    gap: 60px;
-  }
   .cta-banner { 
     margin-block-end: 0; 
   }
@@ -1363,6 +1357,12 @@
   .cta-content { 
     padding-block: 80px; 
   }
+  .cta .custom-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-end;
+    gap: 60px;
+  }
 
   /* TESTIMONIAL */
   .patient-image {
@@ -1448,8 +1448,5 @@
   /* Call To Action */
   .cta .custom-container { 
     align-items: center; 
-  }
-  .cta-banner { 
-    margin-block-start: -120px; 
   }
 }

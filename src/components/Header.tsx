@@ -88,7 +88,7 @@ export const Header = memo(() => {
                             className="logo"
                         >
                             <Image
-                                width={40}
+                                width={60}
                                 height={55}
                                 src="/images/logo.webp"
                                 alt="logo"
