@@ -6,6 +6,7 @@ import AnalyticsWrapper from "@/utils/AnalyticsWrapper";
 import { Header } from "@/components/Header";
 import { BackToTop } from "@/components/BackToTop";
 import { Footer } from "@/components/Footer";
+import { skinHairClinicStructuredData, skinHairServicesStructuredData, skinHairSpecialtiesStructuredData } from "@/constants";
 
 const roboto = localFont({
   src: [
@@ -153,7 +154,7 @@ export const metadata: Metadata = {
     description: "Dr. Karuna Skin Hair & Laser Center offers comprehensive skin, hair and laser treatments in Dharan, Nepal. Expert dermatologists providing treatments such as laser hair removal, acne treatment, anti-aging therapy, skin rejuvenation, hair loss treatment, pigmentation removal, and advanced aesthetic procedures in a modern, comfortable clinic.",
     type: "website",
     locale: "en_US",
-    url: "https:///karuna-clinic.vercel.app/",
+    url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
     siteName: "Dr. Karuna Skin Hair & Laser Center",
     images: [
       {
@@ -183,6 +184,31 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+
+      <head>
+        <script
+          type="application/ld+json"
+          // "dangerouslySetInnerHTML" is a way to inject raw HTML content into a React component.
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(skinHairClinicStructuredData),  // "__html" property accepts raw HTML/text
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(skinHairServicesStructuredData),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(skinHairSpecialtiesStructuredData),
+          }}
+        />
+        {/* Verification tags if needed */}
+        {/* <meta name="facebook-domain-verification" content="your-verification-code" /> */}
+      </head>
+
       <body
         className={`${roboto.variable} ${poppins.variable}`}
         suppressHydrationWarning={true}
