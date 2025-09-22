@@ -3,7 +3,7 @@ import { MetadataRoute } from "next";
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Core restaurant pages
+  // Core clinic pages
   const staticRoutes = [
     {
       url: `${baseUrl}`,
