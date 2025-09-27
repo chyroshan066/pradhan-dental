@@ -6,7 +6,7 @@ import { TitleHeader } from "../utility/TitleHeader";
 import styles from "./Service.module.css";
 
 const ServiceCard = memo(({
-    imgSrc, name, text, href, idStr
+    imgSrc, name, text, idStr
 }: Services) => (
     <li id={idStr}>
         <div className={styles.serviceCard}>
@@ -55,7 +55,6 @@ export const Service = memo(() => (
                             imgSrc={service.imgSrc}
                             name={service.name}
                             text={service.text}
-                            href={service.href}
                             idStr={service.idStr}
                         />
                     ))
@@ -82,7 +81,6 @@ export const Service = memo(() => (
                             imgSrc={service.imgSrc}
                             name={service.name}
                             text={service.text}
-                            href={service.href}
                             idStr={service.idStr}
                         />
                     ))
@@ -96,7 +94,6 @@ export const Service = memo(() => (
                             imgSrc={service.imgSrc}
                             name={service.name}
                             text={service.text}
-                            href={service.href}
                             idStr={service.idStr}
                         />
                     ))
@@ -110,7 +107,6 @@ export const Service = memo(() => (
                             imgSrc={service.imgSrc}
                             name={service.name}
                             text={service.text}
-                            href={service.href}
                             idStr={service.idStr}
                         />
                     ))
@@ -124,7 +120,6 @@ export const Service = memo(() => (
                             imgSrc={service.imgSrc}
                             name={service.name}
                             text={service.text}
-                            href={service.href}
                             idStr={service.idStr}
                         />
                     ))

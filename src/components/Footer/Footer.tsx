@@ -142,3 +142,6 @@ export const Footer = memo(() => (
         </div>
     </footer>
 ));
+
+
+Footer.displayName = "Footer";
