@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "./globals.css"
 import localFont from "next/font/local";
 import IonicScripts from "@/utils/IonicScripts";
 import AnalyticsWrapper from "@/utils/AnalyticsWrapper";
 import { Header } from "@/components/Header/Header";
 import { BackToTop } from "@/components/BackToTop/BackToTop";
 import { Footer } from "@/components/Footer/Footer";
-import { skinHairClinicStructuredData, skinHairServicesStructuredData, skinHairSpecialtiesStructuredData } from "@/constants";
+import { dentalServicesStructuredData, dentalClinicStructuredData, dentalSpecialtiesStructuredData } from "@/constants";
 
 const roboto = localFont({
   src: [
@@ -73,35 +73,35 @@ const poppins = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Dr. Karuna Skin Hair & Laser Center - Advanced Aesthetic Care in Dharan, Nepal",
-  description: "Dr. Karuna Skin Hair & Laser Center offers comprehensive skin, hair and laser treatments in Dharan, Nepal. Expert dermatologists providing treatments such as laser hair removal, acne treatment, anti-aging therapy, skin rejuvenation, hair loss treatment, pigmentation removal, and advanced aesthetic procedures in a modern, comfortable clinic.",
+  title: "Pradhan Dental - Advanced Dental Care in Biratnagar, Nepal",
+  description: "Pradhan Dental offers comprehensive dental care in Birtamode, Nepal. Expert dentists providing treatments such as dental implants, braces, root canal therapy, cosmetic dentistry, teeth whitening, and preventive oral care in a modern, comfortable clinic.",
   keywords: [
-    "Dr. Karuna Skin Hair Laser Center",
-    "skin clinic Dharan",
-    "dermatologist Dharan",
-    "laser hair removal Dharan",
-    "acne treatment Dharan",
-    "skin treatment Dharan",
-    "hair loss treatment Dharan",
-    "anti-aging therapy Dharan",
-    "laser treatment Dharan",
-    "best dermatologist Dharan",
-    "skin care Nepal",
-    "pigmentation removal Dharan",
-    "aesthetic clinic Dharan",
-    "hair transplant Dharan",
-    "skin rejuvenation Dharan",
-    "melasma treatment Dharan",
-    "laser therapy Dharan",
-    "cosmetic dermatology Dharan",
-    "skin whitening Dharan",
-    "scar removal Dharan",
-    "Dr. Karuna dermatologist Nepal"
+    "Pradhan Dental",
+    "dental clinic",
+    "dentist Birtamode",
+    "dental implants Birtamode",
+    "braces Birtamode",
+    "cosmetic dentistry Birtamode",
+    "root canal Birtamode",
+    "teeth whitening Birtamode",
+    "orthodontics Birtamode",
+    "best dentist Birtamode",
+    "dental care Nepal",
+    "oral surgery Birtamode",
+    "family dentist Birtamode",
+    "tooth extraction Birtamode",
+    "dental checkup Birtamode",
+    "gum treatment Birtamode",
+    "pediatric dentist Birtamode",
+    "affordable dental care Birtamode",
+    "emergency dental Birtamode",
+    "dental hygiene Birtamode",
+    "Pradhan Dental Nepal"
   ],
-  authors: [{ name: "Dr. Karuna Skin Hair & Laser Center" }],
-  creator: "Dr. Karuna Skin Hair & Laser Center",
-  publisher: "Dr. Karuna Skin Hair & Laser Center",
-  metadataBase: new URL("https:///karuna-clinic.vercel.app/"),
+  authors: [{ name: "Pradhan Dental" }],
+  creator: "Pradhan Dental",
+  publisher: "Pradhan Dental",
+  metadataBase: new URL("https:///pradhandental.com"),
   alternates: {
     canonical: "/",
   },
@@ -150,25 +150,25 @@ export const metadata: Metadata = {
   },
   manifest: '/favicon_io/site.webmanifest',
   openGraph: {
-    title: "Dr. Karuna Skin Hair & Laser Center - Advanced Aesthetic Care in Dharan, Nepal",
-    description: "Dr. Karuna Skin Hair & Laser Center offers comprehensive skin, hair and laser treatments in Dharan, Nepal. Expert dermatologists providing treatments such as laser hair removal, acne treatment, anti-aging therapy, skin rejuvenation, hair loss treatment, pigmentation removal, and advanced aesthetic procedures in a modern, comfortable clinic.",
+    title: "Pradhan Dental - Advanced Dental Care in Biratnagar, Nepal",
+    description: "Expert dentists in Birtamode offering dental implants, braces, root canals, cosmetic dentistry, and preventive care in a modern, patient-friendly clinic.",
     type: "website",
     locale: "en_US",
     url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
-    siteName: "Dr. Karuna Skin Hair & Laser Center",
+    siteName: "Pradhan Dental",
     images: [
       {
         url: "/images/preview.webp",
         width: 1200,
         height: 630,
-        alt: "Dr. Karuna Skin Hair & Laser Center Preview",
+        alt: "Pradhan Dental Clinic Preview",
       }
     ],
   },
   category: "health",
-  classification: "Dermatology & Aesthetic Clinic",
+  classification: "Dental Clinic",
   referrer: "origin-when-cross-origin",
-  applicationName: "Dr. Karuna Skin Hair & Laser Center",
+  applicationName: "BiratCity Dental",
   generator: "Next.js",
   viewport: {
     width: 'device-width',
@@ -190,19 +190,19 @@ export default function RootLayout({
           type="application/ld+json"
           // "dangerouslySetInnerHTML" is a way to inject raw HTML content into a React component.
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(skinHairClinicStructuredData),  // "__html" property accepts raw HTML/text
+            __html: JSON.stringify(dentalServicesStructuredData),  // "__html" property accepts raw HTML/text
           }}
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(skinHairServicesStructuredData),
+            __html: JSON.stringify(dentalClinicStructuredData),
           }}
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(skinHairSpecialtiesStructuredData),
+            __html: JSON.stringify(dentalSpecialtiesStructuredData),
           }}
         />
         {/* Verification tags if needed */}

@@ -61,9 +61,9 @@ interface ListItem {
   item: MedicalSpecialty;
 }
 
-interface MedicalBusinessStructuredData {
+interface DentalBusinessStructuredData {
   "@context": "https://schema.org";
-  "@type": "MedicalBusiness";
+  "@type": "Dentist";
   name: string;
   description: string;
   url: string | undefined;
@@ -79,7 +79,7 @@ interface MedicalBusinessStructuredData {
   potentialAction: ScheduleAction;
 }
 
-interface MedicalServicesStructuredData {
+interface DentalServicesStructuredData {
   "@context": "https://schema.org";
   "@type": "MedicalBusiness";
   name: string;
@@ -95,54 +95,47 @@ interface SpecialtiesStructuredData {
   itemListElement: ListItem[];
 }
 
-export const skinHairClinicStructuredData: MedicalBusinessStructuredData = {
+export const dentalClinicStructuredData: DentalBusinessStructuredData = {
   "@context": "https://schema.org",
-  "@type": "MedicalBusiness",
-  "name": "Dr. Karuna's Skin Hair & Laser Centre", 
-  "description": "Professional dermatology and cosmetic treatment services specializing in skin care, hair restoration, laser treatments, and aesthetic procedures. Advanced technology, experienced specialists, and comprehensive beauty solutions.", 
+  "@type": "Dentist",
+  "name": "Pradhan Dental", 
+  "description": "Professional dental care services in Birtamode. Comprehensive oral health treatments including routine checkups, advanced procedures, orthodontics, and emergency dental care. Modern equipment, experienced dentists, and patient-focused approach.", 
   "url": process.env.NEXT_PUBLIC_BASE_URL,
   
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Putali Line",
-    "addressLocality": "Dharan",
-    "addressRegion": "Koshi Province",
-    "postalCode": "56700",
+    "streetAddress": "Aduwa Khola",
+    "addressLocality": "Birtamode",
+    "addressRegion": "Koshi",
+    "postalCode": "57204",
     "addressCountry": "NP"
   },
   
-  "telephone": "+977-9811316273",
-  "email": "drkaruna.clinic@gmail.com",
+  "telephone": "+977-23530874",
+  "email": "pradhandental.btm@gmail.com",
   
   "openingHours": [
-    "Su-Fr 8:00-19:00",
+    "Su-Fr 9:00-17:00",
   ],
   
-  "medicalSpecialty": [
-    "Dermatology", 
-    "Cosmetic Surgery", 
-    "Laser Medicine", 
-    "Hair Restoration", 
-    "Aesthetic Medicine"
-  ],
-  "priceRange": "$$$",
+  "medicalSpecialty": ["Dentistry", "Oral Surgery", "Orthodontics", "Periodontics"],
+  "priceRange": "$$",
   
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.6",
-    "ratingCount": "14"
+    "ratingValue": "5.0",
+    "ratingCount": "2"
   },
   
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": "26.81239", 
-    "longitude": "87.28110"
+    "latitude": "26.64260", 
+    "longitude": "87.99009"
   },
   
   "sameAs": [
-    "https://www.facebook.com/drkarunasskinclinic#",
-    "https://www.instagram.com/dr.karunasingh/",
-    "https://www.tiktok.com/@drkarunaofficial?_t=ZS-8zYjc3a6LfU"
+    "https://www.facebook.com/pradhan.dental",
+    "https://www.tiktok.com/search?q=Pradhan%20Dental&t=1758690321548"
   ],
   
   "potentialAction": {
@@ -153,265 +146,265 @@ export const skinHairClinicStructuredData: MedicalBusinessStructuredData = {
     },
     "result": {
       "@type": "Appointment",
-      "name": "Consultation Appointment"
+      "name": "Dental Appointment"
     }
   }
 };
 
-export const skinHairServicesStructuredData: MedicalServicesStructuredData = {
+export const dentalServicesStructuredData: DentalServicesStructuredData = {
   "@context": "https://schema.org",
   "@type": "MedicalBusiness",
-  "name": "Dr. Karuna's Skin Hair & Laser Centre",
-  "description": "Comprehensive dermatological and aesthetic treatments including surgical procedures, laser treatments, cosmetic enhancements, and hair restoration",
+  "name": "Dental Services",
+  "description": "Comprehensive dental care services including preventive, restorative, surgical, and cosmetic treatments",
   
   "availableService": [
     {
       "@type": "MedicalProcedure",
-      "name": "Mole Removal",
-      "description": "Safe surgical removal of moles for cosmetic or medical reasons using advanced techniques.",
-      "procedureType": "Dermatological Surgery",
+      "name": "Dental Checkup",
+      "description": "Routine examination and cleaning to maintain healthy teeth and gums. Comprehensive oral health assessment including cavity detection and preventive care.",
+      "procedureType": "Preventive Care",
       "bodyLocation": {
         "@type": "AnatomicalStructure",
-        "name": "Skin"
+        "name": "Oral Cavity"
       }
     },
     {
       "@type": "MedicalProcedure",
-      "name": "Wart Removal",
-      "description": "Effective treatment to remove viral warts using various medical techniques including cryotherapy and laser.",
-      "procedureType": "Dermatological Treatment",
+      "name": "Dental X-Ray",
+      "description": "Advanced digital imaging to detect hidden dental problems and plan precise treatments. Includes panoramic and periapical X-rays.",
+      "procedureType": "Diagnostic Imaging",
       "bodyLocation": {
         "@type": "AnatomicalStructure",
-        "name": "Skin"
+        "name": "Teeth and Jaw"
       }
     },
     {
       "@type": "MedicalProcedure",
-      "name": "Skin Tag Removal",
-      "description": "Quick, painless removal of benign skin tags for smoother skin appearance using precision techniques.",
-      "procedureType": "Minor Surgery",
+      "name": "Teeth Whitening",
+      "description": "Professional brightening treatment to remove stains and enhance your smile. Safe, effective in-office whitening procedures.",
+      "procedureType": "Cosmetic Dentistry",
       "bodyLocation": {
         "@type": "AnatomicalStructure",
-        "name": "Skin"
+        "name": "Teeth"
       }
     },
     {
       "@type": "MedicalProcedure",
-      "name": "Corn Removal",
-      "description": "Professional removal of painful corns to restore foot comfort and mobility through podiatric care.",
-      "procedureType": "Podiatric Treatment",
+      "name": "Gingivitis & Periodontitis Treatment",
+      "description": "Specialized treatment for gum disease to restore healthy gums and prevent tooth loss. Deep cleaning and periodontal therapy.",
+      "procedureType": "Periodontal Care",
       "bodyLocation": {
         "@type": "AnatomicalStructure",
-        "name": "Feet"
+        "name": "Gums"
       }
     },
     {
       "@type": "MedicalProcedure",
-      "name": "Split Ear Lobe Repair",
-      "description": "Surgical repair of torn or stretched earlobes for natural appearance restoration with minimal scarring.",
-      "procedureType": "Reconstructive Surgery",
+      "name": "Composite Filling",
+      "description": "Tooth-colored fillings to repair cavities and restore natural appearance. Durable composite resin restorations.",
+      "procedureType": "Restorative Dentistry",
       "bodyLocation": {
         "@type": "AnatomicalStructure",
-        "name": "Ear Lobe"
+        "name": "Teeth"
       }
     },
     {
       "@type": "MedicalProcedure",
-      "name": "Medipeel",
-      "description": "Professional chemical peel treatment to rejuvenate and improve skin texture, reducing fine lines and pigmentation.",
-      "procedureType": "Chemical Peel",
+      "name": "GIC Restoration",
+      "description": "Glass Ionomer Cement fillings for cavity repair with fluoride release properties. Ideal for root surface cavities.",
+      "procedureType": "Restorative Dentistry",
       "bodyLocation": {
         "@type": "AnatomicalStructure",
-        "name": "Facial Skin"
+        "name": "Teeth"
       }
     },
     {
       "@type": "MedicalProcedure",
-      "name": "PRP Treatment",
-      "description": "Platelet-rich plasma injections to stimulate natural hair growth and thickness using your own blood platelets.",
-      "procedureType": "Regenerative Medicine",
+      "name": "Root Canal Treatment (RCT)",
+      "description": "Root canal treatment to save infected teeth and eliminate pain. Advanced endodontic therapy to preserve natural teeth.",
+      "procedureType": "Endodontics",
       "bodyLocation": {
         "@type": "AnatomicalStructure",
-        "name": "Scalp"
+        "name": "Tooth Root"
       }
     },
     {
       "@type": "MedicalProcedure",
-      "name": "GFC Treatment",
-      "description": "Growth factor concentrate therapy to promote natural hair regrowth and density through advanced biotechnology.",
-      "procedureType": "Hair Restoration",
+      "name": "Oral Surgery",
+      "description": "Surgical procedures for complex dental treatments including impacted wisdom teeth and surgical extractions.",
+      "procedureType": "Oral Surgery",
       "bodyLocation": {
         "@type": "AnatomicalStructure",
-        "name": "Scalp"
+        "name": "Oral Cavity"
       }
     },
     {
       "@type": "MedicalProcedure",
-      "name": "Acne Scar Treatment",
-      "description": "Advanced treatments to reduce acne scars and restore smooth skin texture using laser and micro-needling techniques.",
-      "procedureType": "Scar Revision",
+      "name": "Complete Denture (CD)",
+      "description": "Custom full dentures to replace all missing teeth and restore complete oral function and aesthetics.",
+      "procedureType": "Prosthodontics",
       "bodyLocation": {
         "@type": "AnatomicalStructure",
-        "name": "Facial Skin"
+        "name": "Upper and Lower Jaw"
       }
     },
     {
       "@type": "MedicalProcedure",
-      "name": "Botox",
-      "description": "Injectable treatment to reduce wrinkles and achieve smoother facial appearance by relaxing facial muscles.",
-      "procedureType": "Injectable Treatment",
+      "name": "Removable Partial Denture (RPD)",
+      "description": "Custom partial dentures to replace multiple missing teeth with removable appliance.",
+      "procedureType": "Prosthodontics",
       "bodyLocation": {
         "@type": "AnatomicalStructure",
-        "name": "Facial Muscles"
+        "name": "Jaw"
       }
     },
     {
       "@type": "MedicalProcedure",
-      "name": "Fillers",
-      "description": "Injectable treatments to restore facial volume and enhance natural contours using hyaluronic acid.",
-      "procedureType": "Cosmetic Injectable",
+      "name": "Fixed Partial Denture (FPD) - Bridge",
+      "description": "Fixed bridges to replace missing teeth permanently, anchored to adjacent healthy teeth.",
+      "procedureType": "Prosthodontics",
       "bodyLocation": {
         "@type": "AnatomicalStructure",
-        "name": "Face"
+        "name": "Teeth"
       }
     },
     {
       "@type": "MedicalProcedure",
-      "name": "Thread Lift",
-      "description": "Non-surgical lifting procedure using PDO threads to tighten and rejuvenate skin with immediate results.",
-      "procedureType": "Non-Surgical Facelift",
+      "name": "Simple Tooth Extraction",
+      "description": "Safe tooth removal procedures for damaged or problematic teeth using gentle extraction techniques.",
+      "procedureType": "Oral Surgery",
       "bodyLocation": {
         "@type": "AnatomicalStructure",
-        "name": "Face and Neck"
+        "name": "Teeth"
       }
     },
     {
       "@type": "MedicalProcedure",
-      "name": "Skin Boosters Treatment",
-      "description": "Hydrating injections to improve skin texture, elasticity, and natural glow using micro-droplets of hyaluronic acid.",
-      "procedureType": "Skin Rejuvenation",
+      "name": "Surgical Extraction",
+      "description": "Complex tooth removal for impacted or difficult-to-extract teeth requiring surgical approach.",
+      "procedureType": "Oral Surgery",
       "bodyLocation": {
         "@type": "AnatomicalStructure",
-        "name": "Face and Neck"
+        "name": "Teeth and Jawbone"
       }
     },
     {
       "@type": "MedicalProcedure",
-      "name": "Laser Hair Reduction",
-      "description": "Advanced laser technology to permanently reduce unwanted hair growth safely on all skin types.",
-      "procedureType": "Laser Treatment",
+      "name": "Orthodontic Treatment - Metal Braces",
+      "description": "Traditional metal braces to straighten teeth and correct bite alignment. Comprehensive orthodontic care.",
+      "procedureType": "Orthodontics",
       "bodyLocation": {
         "@type": "AnatomicalStructure",
-        "name": "Body Hair"
+        "name": "Teeth and Jaw"
       }
     },
     {
       "@type": "MedicalProcedure",
-      "name": "Laser Tattoo Removal",
-      "description": "Advanced Q-switched laser technology to safely fade and remove unwanted tattoos effectively with minimal scarring.",
-      "procedureType": "Laser Surgery",
+      "name": "Orthodontic Treatment - Ceramic Braces",
+      "description": "Tooth-colored ceramic braces for discreet orthodontic treatment with aesthetic appeal.",
+      "procedureType": "Orthodontics",
       "bodyLocation": {
         "@type": "AnatomicalStructure",
-        "name": "Tattooed Skin"
+        "name": "Teeth and Jaw"
       }
     },
     {
       "@type": "MedicalProcedure",
-      "name": "Meso Facial",
-      "description": "Micro-injections of vitamins and nutrients to revitalize and hydrate skin at the cellular level.",
-      "procedureType": "Mesotherapy",
+      "name": "Dental Crown - Ceramic",
+      "description": "High-quality ceramic caps to protect and restore damaged or weakened teeth with natural appearance.",
+      "procedureType": "Prosthodontics",
       "bodyLocation": {
         "@type": "AnatomicalStructure",
-        "name": "Facial Skin"
+        "name": "Individual Tooth"
       }
     },
     {
       "@type": "MedicalProcedure",
-      "name": "Medi Facial",
-      "description": "Medical-grade facial treatment to address specific skin concerns and conditions with professional products.",
-      "procedureType": "Medical Facial",
+      "name": "Dental Crown - Metal",
+      "description": "Durable metal crowns for posterior teeth requiring maximum strength and longevity.",
+      "procedureType": "Prosthodontics",
       "bodyLocation": {
         "@type": "AnatomicalStructure",
-        "name": "Face"
+        "name": "Individual Tooth"
       }
     },
     {
       "@type": "MedicalProcedure",
-      "name": "Oxy-Hydra Facial",
-      "description": "Deep cleansing and hydrating facial treatment using oxygen and water therapy for instant skin refresh.",
-      "procedureType": "Hydrating Facial",
+      "name": "Halitosis Treatment",
+      "description": "Specialized care to eliminate bad breath and restore fresh confidence through comprehensive oral health improvement.",
+      "procedureType": "General Dentistry",
       "bodyLocation": {
         "@type": "AnatomicalStructure",
-        "name": "Facial Skin"
+        "name": "Oral Cavity"
       }
     },
     {
       "@type": "MedicalProcedure",
-      "name": "Oxy-Geneo Facial",
-      "description": "Advanced 3-in-1 facial combining exfoliation, oxygenation, and nourishing infusion for comprehensive skin renewal.",
-      "procedureType": "Advanced Facial",
+      "name": "Oral Boil Treatment",
+      "description": "Professional care to treat oral boils and prevent painful infections through drainage and antibiotic therapy.",
+      "procedureType": "Oral Medicine",
       "bodyLocation": {
         "@type": "AnatomicalStructure",
-        "name": "Face"
+        "name": "Oral Soft Tissues"
       }
     },
     {
       "@type": "MedicalProcedure",
-      "name": "Laser Facial",
-      "description": "Laser technology treatment to improve skin texture and reduce imperfections with precision and safety.",
-      "procedureType": "Laser Skin Treatment",
+      "name": "Scaling (Deep Cleaning)",
+      "description": "Professional plaque and tartar removal to maintain healthy gums and teeth. Ultrasonic and manual scaling.",
+      "procedureType": "Preventive Care",
       "bodyLocation": {
         "@type": "AnatomicalStructure",
-        "name": "Facial Skin"
+        "name": "Teeth and Gums"
       }
     },
     {
       "@type": "MedicalProcedure",
-      "name": "Photo Facial",
-      "description": "Intense Pulsed Light (IPL) therapy to treat pigmentation, redness, and improve overall skin tone.",
-      "procedureType": "Light Therapy",
+      "name": "Tooth Polishing",
+      "description": "Professional tooth polishing to remove stains and restore natural shine. Final step in professional cleaning.",
+      "procedureType": "Preventive Care",
       "bodyLocation": {
         "@type": "AnatomicalStructure",
-        "name": "Face"
+        "name": "Teeth"
       }
     },
     {
       "@type": "MedicalProcedure",
-      "name": "Vampire Facial",
-      "description": "Platelet-rich plasma therapy using your own blood to rejuvenate skin and stimulate collagen production.",
-      "procedureType": "PRP Facial",
+      "name": "Dental Trauma Management",
+      "description": "Emergency care for dental injuries to save and restore damaged teeth. Immediate and follow-up treatment.",
+      "procedureType": "Emergency Dentistry",
       "bodyLocation": {
         "@type": "AnatomicalStructure",
-        "name": "Facial Skin"
+        "name": "Oral Cavity"
       }
     },
     {
       "@type": "MedicalProcedure",
-      "name": "Hair Transplant",
-      "description": "Advanced surgical procedure to relocate hair follicles for permanent hair restoration using FUE or FUT techniques.",
-      "procedureType": "Hair Restoration Surgery",
+      "name": "Full Mouth Rehabilitation",
+      "description": "Comprehensive restoration to rebuild and transform your entire smile. Complete oral reconstruction with multiple specialties.",
+      "procedureType": "Comprehensive Treatment",
       "bodyLocation": {
         "@type": "AnatomicalStructure",
-        "name": "Scalp"
+        "name": "Entire Oral Cavity"
       }
     }
   ]
 };
 
-export const skinHairSpecialtiesStructuredData:SpecialtiesStructuredData = {
+export const dentalSpecialtiesStructuredData: SpecialtiesStructuredData = {
   "@context": "https://schema.org",
   "@type": "ItemList",
-  "name": "Dermatology and Aesthetic Treatment Specialties",
-  "description": "Comprehensive skin, hair, and aesthetic care organized by specialty areas",
+  "name": "Dental Specialties and Services",
+  "description": "Comprehensive dental care organized by specialty areas",
   "itemListElement": [
     {
       "@type": "ListItem",
       "position": 1,
       "item": {
         "@type": "MedicalSpecialty",
-        "name": "Dermatological Surgery",
-        "description": "Surgical procedures for skin lesions and conditions",
-        "includedServices": ["Mole Removal", "Wart Removal", "Skin Tag Removal", "Split Ear Lobe Repair", "Corn Removal"]
+        "name": "Preventive Dentistry",
+        "description": "Routine care to maintain oral health and prevent dental problems",
+        "includedServices": ["Dental Checkup", "Scaling", "Polishing", "X-Ray"]
       }
     },
     {
@@ -419,9 +412,9 @@ export const skinHairSpecialtiesStructuredData:SpecialtiesStructuredData = {
       "position": 2,
       "item": {
         "@type": "MedicalSpecialty",
-        "name": "Laser Treatments",
-        "description": "Advanced laser technology for hair removal and skin treatments",
-        "includedServices": ["Laser Hair Reduction", "Laser Tattoo Removal", "Laser Facial"]
+        "name": "Restorative Dentistry",
+        "description": "Treatments to repair and restore damaged teeth",
+        "includedServices": ["Composite Filling", "GIC Restoration", "Dental Crown"]
       }
     },
     {
@@ -429,9 +422,9 @@ export const skinHairSpecialtiesStructuredData:SpecialtiesStructuredData = {
       "position": 3, 
       "item": {
         "@type": "MedicalSpecialty",
-        "name": "Hair Restoration",
-        "description": "Comprehensive treatments for hair loss and thinning",
-        "includedServices": ["Hair Transplant", "PRP Treatment", "GFC Treatment"]
+        "name": "Endodontics",
+        "description": "Root canal treatments to save infected teeth",
+        "includedServices": ["Root Canal Treatment"]
       }
     },
     {
@@ -439,9 +432,9 @@ export const skinHairSpecialtiesStructuredData:SpecialtiesStructuredData = {
       "position": 4,
       "item": {
         "@type": "MedicalSpecialty", 
-        "name": "Injectable Treatments",
-        "description": "Cosmetic injectables for facial enhancement and rejuvenation",
-        "includedServices": ["Botox", "Fillers", "Thread Lift", "Skin Boosters Treatment"]
+        "name": "Oral Surgery",
+        "description": "Surgical procedures for complex dental cases",
+        "includedServices": ["Tooth Extraction", "Surgical Extraction", "Oral Surgery", "Trauma Management"]
       }
     },
     {
@@ -449,9 +442,9 @@ export const skinHairSpecialtiesStructuredData:SpecialtiesStructuredData = {
       "position": 5,
       "item": {
         "@type": "MedicalSpecialty",
-        "name": "Facial Treatments", 
-        "description": "Professional facial treatments for skin health and beauty",
-        "includedServices": ["Medi Facial", "Meso Facial", "Oxy-Hydra Facial", "Oxy-Geneo Facial", "Photo Facial", "Vampire Facial"]
+        "name": "Prosthodontics", 
+        "description": "Replacement of missing teeth with artificial substitutes",
+        "includedServices": ["Complete Denture", "Partial Denture", "Fixed Bridge", "Full Mouth Rehabilitation"]
       }
     },
     {
@@ -459,9 +452,9 @@ export const skinHairSpecialtiesStructuredData:SpecialtiesStructuredData = {
       "position": 6,
       "item": {
         "@type": "MedicalSpecialty",
-        "name": "Skin Rejuvenation",
-        "description": "Advanced treatments to restore youthful skin appearance",
-        "includedServices": ["Medipeel", "Acne Scar Treatment", "Skin Boosters Treatment", "Photo Facial"]
+        "name": "Orthodontics",
+        "description": "Correction of teeth and jaw alignment",
+        "includedServices": ["Metal Braces", "Ceramic Braces", "Orthodontic Treatment"]
       }
     },
     {
@@ -469,9 +462,9 @@ export const skinHairSpecialtiesStructuredData:SpecialtiesStructuredData = {
       "position": 7,
       "item": {
         "@type": "MedicalSpecialty",
-        "name": "Aesthetic Medicine",
-        "description": "Cosmetic procedures to enhance natural beauty", 
-        "includedServices": ["Botox", "Fillers", "Thread Lift", "Vampire Facial", "Laser Facial"]
+        "name": "Cosmetic Dentistry",
+        "description": "Aesthetic improvements to enhance your smile", 
+        "includedServices": ["Teeth Whitening", "Ceramic Crowns", "Polishing"]
       }
     },
     {
@@ -479,9 +472,9 @@ export const skinHairSpecialtiesStructuredData:SpecialtiesStructuredData = {
       "position": 8,
       "item": {
         "@type": "MedicalSpecialty",
-        "name": "Regenerative Medicine",
-        "description": "Cutting-edge treatments using body's natural healing",
-        "includedServices": ["PRP Treatment", "GFC Treatment", "Vampire Facial", "Skin Boosters Treatment"]
+        "name": "Periodontics",
+        "description": "Treatment of gum diseases and supporting structures",
+        "includedServices": ["Gingivitis Treatment", "Periodontitis Treatment", "Scaling"]
       }
     }
   ]
