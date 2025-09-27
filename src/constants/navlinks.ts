@@ -5,17 +5,17 @@ export const NAVLINKS: Link[] = [
         href: "/#home",
         name: "Home",
     },
-    // {
-    //     href: "/#about",
-    //     name: "About",
-    // },
+    {
+        href: "/#about",
+        name: "About",
+    },
     {
         href: "/#service",
         name: "Services",
     },
     {
-        href: "/dermatologist",
-        name: "Dermatologist",
+        href: "/dentist",
+        name: "Dentist",
     },
     {
         href: "/gallery",

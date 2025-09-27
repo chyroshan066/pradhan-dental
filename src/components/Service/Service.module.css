@@ -1,0 +1,48 @@
+.serviceBanner { 
+  display: none; 
+}
+.service { 
+  padding-block-end: 0; 
+}
+.service .sectionTitle { 
+  margin-block-end: 50px; 
+}
+.serviceList {
+  display: grid;
+  gap: 15px;
+}
+.serviceCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  min-height: 100%;
+  border: 1px solid var(--light-peach-beige);
+  border-radius: var(--radius-4);
+  padding: 30px;
+}
+.serviceCard .cardIcon {
+  width: 50px;
+  flex-shrink: 0;
+}
+.serviceCard .cardTitle { 
+  margin-block-end: 8px; 
+}
+
+@media (min-width: 768px) {
+  .serviceList {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+  }
+}
+
+@media (min-width: 992px) {
+  .serviceList { 
+    grid-template-columns: repeat(3, 1fr); 
+  }
+  .serviceBanner {
+    display: block;
+    grid-column: 2 / 3;  /* "grid-column" is shorthand for "grid-column-start" and "grid-column-end". Value 2 / 3 means: Start at the grid line 2 and End before the grid line 3 */
+    grid-row: 1 / 4;
+    align-self: center;
+  }
+}

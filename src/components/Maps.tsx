@@ -72,10 +72,10 @@ export const Maps: React.FC = () => {
 
     // Dental clinic location (you can change these coordinates)
     const clinicLocation: ClinicLocation = {
-        lat: 26.81233,
-        lng: 87.28107,
-        name: "Basuki Dental Clinic",
-        address: "Biratnagar, Morang, Nepal"
+        lat: 26.64255,
+        lng: 87.99014,
+        name: "Pradhan Dental Clinic",
+        address: "Birtamode, Jhapa, Nepal"
     };
 
     useEffect(() => {

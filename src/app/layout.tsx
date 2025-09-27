@@ -3,9 +3,9 @@ import "./globals.css";
 import localFont from "next/font/local";
 import IonicScripts from "@/utils/IonicScripts";
 import AnalyticsWrapper from "@/utils/AnalyticsWrapper";
-import { Header } from "@/components/Header";
-import { BackToTop } from "@/components/BackToTop";
-import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header/Header";
+import { BackToTop } from "@/components/BackToTop/BackToTop";
+import { Footer } from "@/components/Footer/Footer";
 import { skinHairClinicStructuredData, skinHairServicesStructuredData, skinHairSpecialtiesStructuredData } from "@/constants";
 
 const roboto = localFont({

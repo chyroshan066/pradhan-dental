@@ -1,0 +1,80 @@
+.heroContent .heroText {
+  color: var(--white);
+  font-size: var(--fontSize-6);
+  line-height: 1.45;
+  margin-block-start: 20px;
+}
+.dentistProfileGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.dentistCard {
+  box-shadow: var(--shadow-3);
+  text-align: center;
+}
+.dentistImageWrapper {
+  margin-block-end: 30px;
+}
+.dentistImgHolder {
+  margin-inline: auto;
+  overflow: hidden;
+}
+.dentistProfileImg {
+  border-radius: 50%;
+  transition: var(--transition-2);
+}
+.dentistProfileImg:hover {
+  transform: scale(1.05);
+}
+.dentistName {
+  margin-block-end: 10px;
+}
+.dentistTitle {
+  color: var(--deep-golden-orange);
+  font-family: var(--fontFamily-poppins);
+}
+.dentistQualificationBadge {
+  display: inline-block;
+}
+.dentistInstitutionInfo {
+  color: var(--white);
+  margin-block-end: 30px;
+}
+.institutionText {
+  text-align: center;
+}
+.dentistAboutText {
+  max-width: 800px;
+}
+.trainingCard:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-3);
+}
+.trainingCardTitle {
+  font-family: var(--fontFamily-poppins);
+}
+.trainingItem:last-child {
+  margin-block-end: 0;
+}
+.communityServiceText {
+  font-size: var(--fontSize-7);
+  color: var(--warm-orange-taupe);
+  line-height: 1.6;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .dentistProfileGrid {
+    grid-template-columns: 400px 1fr;
+    gap: 80px;
+  }
+}
+
+@media (min-width: 992px) {
+  .dentistProfileGrid {
+    grid-template-columns: 450px 1fr;
+    gap: 100px;
+  }
+}

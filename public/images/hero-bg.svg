@@ -1,0 +1,48 @@
+<svg width="100%" height="100%" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Consistent base gradient -->
+    <linearGradient id="consistentBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:hsl(45, 50%, 96%);stop-opacity:1" />
+      <stop offset="33%" style="stop-color:hsl(40, 40%, 94%);stop-opacity:1" />
+      <stop offset="66%" style="stop-color:hsl(35, 35%, 92%);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:hsl(45, 45%, 95%);stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Subtle texture pattern -->
+    <pattern id="consistentPattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <circle cx="20" cy="20" r="1" fill="hsl(35, 85%, 55%)" opacity="0.025"/>
+      <circle cx="10" cy="10" r="0.5" fill="hsl(25, 80%, 35%)" opacity="0.02"/>
+      <circle cx="30" cy="30" r="0.5" fill="hsl(40, 90%, 60%)" opacity="0.02"/>
+    </pattern>
+    
+    <!-- Very subtle overlay for warmth -->
+    <linearGradient id="warmTint" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:hsl(25, 30%, 85%);stop-opacity:0.03" />
+      <stop offset="50%" style="stop-color:hsl(35, 40%, 88%);stop-opacity:0.02" />
+      <stop offset="100%" style="stop-color:hsl(40, 35%, 90%);stop-opacity:0.03" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Consistent base background -->
+  <rect width="100%" height="100%" fill="url(#consistentBg)"/>
+  
+  <!-- Subtle pattern overlay for texture -->
+  <rect width="100%" height="100%" fill="url(#consistentPattern)"/>
+  
+  <!-- Even distribution of very subtle accent areas -->
+  <rect x="300" y="200" width="300" height="200" fill="hsl(40, 90%, 60%)" opacity="0.012"/>
+  <rect x="900" y="200" width="300" height="200" fill="hsl(35, 85%, 55%)" opacity="0.015"/>
+  <rect x="0" y="400" width="400" height="200" fill="hsl(40, 85%, 65%)" opacity="0.01"/>
+  <rect x="800" y="400" width="400" height="200" fill="hsl(35, 80%, 70%)" opacity="0.012"/>
+  
+  <!-- Final warm tint for consistency -->
+  <rect width="100%" height="100%" fill="url(#warmTint)"/>
+  
+  <!-- Very subtle repeating elements for visual interest -->
+  <g opacity="0.008">
+    <circle cx="150" cy="150" r="80" fill="none" stroke="hsl(35, 85%, 55%)" stroke-width="1"/>
+    <circle cx="450" cy="350" r="60" fill="none" stroke="hsl(40, 90%, 60%)" stroke-width="1"/>
+    <circle cx="750" cy="550" r="70" fill="none" stroke="hsl(25, 80%, 35%)" stroke-width="1"/>
+    <circle cx="1050" cy="250" r="90" fill="none" stroke="hsl(35, 85%, 75%)" stroke-width="1"/>
+  </g>
+</svg>

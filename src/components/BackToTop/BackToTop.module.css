@@ -1,0 +1,25 @@
+.backTopBtn {
+  position: fixed;
+  bottom: 10px;
+  right: 20px;
+  background-color: var(--deep-golden-orange);
+  font-size: 18px;
+  color: var(--white);
+  padding: 14px;
+  border-radius: 50%;
+  visibility: hidden;
+  opacity: 0;
+  transition: var(--transition);
+}
+.backTopBtn.active {
+  transform: translateY(-10px);
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .backTopBtn {
+    bottom: 70px;
+    right: 50px;
+  }
+}

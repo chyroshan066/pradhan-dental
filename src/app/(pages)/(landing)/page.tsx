@@ -1,12 +1,13 @@
-import { About } from "@/components/About";
-import { Appintment } from "@/components/Appointment";
-import { CallToAction } from "@/components/CallToAction";
-import { Hero } from "@/components/Hero";
-import { Intro } from "@/components/Intro";
+import { About } from "@/components/About/About";
+import { Appointment } from "@/components/Appointment/Appointment";
+import { CallToAction } from "@/components/CallToAction/CallToAction";
+import { Dentist } from "@/components/Dentist/Dentist";
+import { Hero } from "@/components/Hero/Hero";
+import { Intro } from "@/components/Intro/Intro";
 import { Maps } from "@/components/Maps";
 import { Review } from "@/components/Review";
-import { Service } from "@/components/Service";
-import { TestimonialSlider } from "@/components/Testimonial";
+import { Service } from "@/components/Service/Service";
+import { TestimonialSlider } from "@/components/Testimonial/Testimonial";
 
 export default function Home() {
   return (
@@ -17,10 +18,11 @@ export default function Home() {
           <Intro />
           <Service />
           <About />
+          <Dentist />
           <CallToAction />
           <TestimonialSlider />
           <Review />
-          <Appintment />
+          <Appointment />
           <Maps />
         </article>
       </main>

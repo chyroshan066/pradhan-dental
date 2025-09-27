@@ -2,15 +2,11 @@ import { Link } from "@/types";
 
 export const SOCIALLINKS: Link[] = [
     {
-        href: "https://www.facebook.com/drkarunasskinclinic#",
+        href: "https://www.facebook.com/pradhan.dental",
         name: "logo-facebook",
     },
     {
-        href: "https://www.instagram.com/dr.karunasingh/",
-        name: "logo-instagram",
-    },
-    {
-        href: "https://www.tiktok.com/@drkarunaofficial?_t=ZS-8zYjc3a6LfU",
+        href: "https://www.tiktok.com/search?q=Pradhan%20Dental&t=1758690321548",
         name: "logo-tiktok",
     },
 ];

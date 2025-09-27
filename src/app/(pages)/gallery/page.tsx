@@ -1,5 +1,5 @@
 import { MEDIA_ITEMS } from '@/constants/gallery';
-import Gallery from './_components/Gallery';
+import Gallery from './_components/Gallery/Gallery';
 
 export default function GalleryPage() {
   return (

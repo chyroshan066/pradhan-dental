@@ -1,0 +1,100 @@
+.doctor .sectionTitle { 
+  margin-block-end: 50px; 
+}
+.doctorCard .cardBanner {
+  border-radius: var(--radius-4);
+  overflow: hidden;
+  margin-block-end: 25px;
+}
+.doctorCard {
+  padding: 30px;
+  border: 1px solid var(--light-peach-beige);
+  border-radius: var(--radius-4);
+  text-align: center;
+  min-height: 100%;
+}
+.doctorCard .cardTitle {
+  font-size: var(--fontSize-4);
+  transition: var(--transition);
+}
+.doctorCard:is(:hover, :focus-within) .cardTitle { 
+  color: var(--deep-golden-orange); 
+}
+.doctorCard .cardSubtitle {
+  color: var(--deep-golden-orange);
+  margin-block: 10px 15px;
+}
+.doctorCard .cardSocialList {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.doctorCard .cardSocialLink {
+  background-color: var(--golden-cream);
+  color: var(--deep-golden-orange);
+  font-size: 16px;
+  padding: 12px;
+  border-radius: 50%;
+  transition: var(--transition);
+}
+.doctorCard .cardSocialLink:is(:hover, :focus) {
+  background-color: var(--deep-golden-orange);
+  color: var(--white);
+}
+.hasScrollbar {
+  display: flex;
+  gap: 30px;
+  overflow-x: auto;
+  margin-inline: 15px;
+  padding-block-end: 40px;
+  margin-block-end: -20px;
+  /* Scroll snap feature locks the view neatly to specific points.
+  "scroll-snap-type" — sets how snap points behave on a scroll container.
+  "inline" — the snap direction follows the inline axis of the element
+  "mandatory" — tells the browser it must snap to the nearest snap point after scrolling ends */
+  scroll-snap-type: inline mandatory;
+}
+.scrollbarItem {
+  min-width: 100%;
+  scroll-snap-align: start;
+}
+.hasScrollbar::-webkit-scrollbar { 
+  height: 10px; 
+}
+.hasScrollbar::-webkit-scrollbar-track {
+  background-color: var(--light-peach-beige);
+  border-radius: var(--radius-4);
+}
+.hasScrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--deep-golden-orange);
+  border-radius: var(--radius-4);
+}
+.hasScrollbar::-webkit-scrollbar-button { 
+  width: calc(25% - 30px); 
+}
+
+@media (min-width: 768px) {
+  .scrollbarItem { 
+    min-width: calc(50% - 15px); 
+  }
+}
+
+@media (min-width: 992px) {
+  .scrollbarItem { 
+    min-width: calc(33.33% - 20px); 
+  }
+}
+
+@media (min-width: 1200px) {
+  .doctor { 
+    padding-block-end: 180px; 
+  }
+  .scrollbarItem { 
+    min-width: calc(25% - 22.5px); 
+  }
+  .hasScrollbar {
+    padding-block-end: 0;
+    margin-block-end: 0;
+  }
+}

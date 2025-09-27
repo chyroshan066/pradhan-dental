@@ -7,7 +7,6 @@ export const Review = memo(() => {
     <section
       className="section review-request"
       id="review-request"
-      style={{ "backgroundImage": "url('/images/hero-bg.webp')" } as React.CSSProperties}
     >
       <div className="custom-container">
         <div className="review-request-content text-center">
@@ -23,7 +22,7 @@ export const Review = memo(() => {
                 fontSize: 'var(--fontSize-6)',
                 marginBlockEnd: '40px'
               }}>
-              Help others discover our exceptional skin, hair & laser treatments by sharing your experience on Google Reviews
+              Help others discover our exceptional dental care by sharing your experience on Google Reviews
             </p>
           </div>
 
@@ -66,7 +65,7 @@ export const Review = memo(() => {
           {/* Call to Action */}
           <div className="review-cta">
             <a
-              href="https://g.page/r/CTFjDvtSgCsCEAI/review"
+              href="https://www.google.com/search?q=PRADHAN+DENTAL+CLINIC+BIRTAMOD+reviews&rlz=1C1GCEU_enUS832US832#lrd=0x39e5bbb66f9d1f9b:0x97812a81ba3bf007,3,,,,"
               target="_blank"
               rel="noopener noreferrer"
               className="btn review-btn-primary"
@@ -89,7 +88,7 @@ export const Review = memo(() => {
 
           {/* Supporting Text */}
           <p className="review-support-text">
-            It only takes 2 minutes and helps other patients find quality skin care
+            It only takes 2 minutes and helps other patients find quality dental care
           </p>
         </div>
       </div>
@@ -98,6 +97,13 @@ export const Review = memo(() => {
         .review-request {
           position: relative;
           overflow: hidden;
+          /* Use the new consistent background */
+          background: linear-gradient(135deg, 
+            hsl(45, 50%, 96%) 0%, 
+            hsl(40, 40%, 94%) 33%, 
+            hsl(35, 35%, 92%) 66%, 
+            hsl(45, 45%, 95%) 100%
+          );
         }
         .review-request::before {
           content: "";
@@ -106,8 +112,8 @@ export const Review = memo(() => {
           left: 0;
           width: 100%;
           height: 100%;
-          background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-          opacity: 0.5;
+          background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='20' cy='20' r='1' fill='hsl(35, 85%, 55%)' opacity='0.025'/%3E%3Ccircle cx='10' cy='10' r='0.5' fill='hsl(25, 80%, 35%)' opacity='0.02'/%3E%3Ccircle cx='30' cy='30' r='0.5' fill='hsl(40, 90%, 60%)' opacity='0.02'/%3E%3C/svg%3E");
+          opacity: 1;
         }
         .review-request-content {
           position: relative;
