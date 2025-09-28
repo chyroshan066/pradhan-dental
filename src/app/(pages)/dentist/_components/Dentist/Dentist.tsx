@@ -23,13 +23,7 @@ const processHighlightedText = (text: string) => {
             return (
                 <span
                     key={index}
-                    style={{
-                        background: 'linear-gradient(135deg, var(--bright-amber), var(--deep-golden-orange))',
-                        WebkitBackgroundClip: 'text',
-                        WebkitTextFillColor: 'transparent',
-                        fontWeight: '700',
-                        display: "inline",
-                    }}
+                    className={styles.highlightedText}
                 >
                     {highlightedText}
                 </span>
@@ -605,7 +599,7 @@ export const Dentist = memo(() => {
                                         lineHeight: '1.7',
                                         margin: '0'
                                     }}>
-                                    Demonstrates exceptional leadership in dental healthcare as President of the Nepal Dental Association, Jhapa District, while serving as Founder President of JCI Jhapa and President-Elect of the Rotaract Club of Surunga, actively advocating for dental professional welfare and driving community development initiatives focused on youth empowerment and humanitarian service.
+                                    Demonstrates exceptional leadership in dental healthcare as <span className={styles.highlightedText}>President of the Nepal Dental Association, Jhapa District</span>, while serving as <span className={styles.highlightedText}>Founder President of JCI Jhapa</span> and  <span className={styles.highlightedText}>President-Elect of the Rotaract Club of Surunga</span>, actively advocating for dental professional welfare and driving community development initiatives focused on youth empowerment and humanitarian service.
                                 </p>
                             </div>
                         </div>

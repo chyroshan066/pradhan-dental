@@ -17,7 +17,7 @@
   z-index: 2;
 }
 .introHeader {
-  margin-block-end: 60px;
+  margin-block-end: 40px;
 }
 .introHeader .sectionSubtitle {
   color: var(--deep-golden-orange);
@@ -32,6 +32,7 @@
 .introVideoContainerFullwidth {
   width: 100%;
   margin-block-start: 0;
+  margin-inline: auto;
 }
 .introVideoContainerFullwidth .videoWrapper {
   position: relative;
@@ -40,15 +41,20 @@
   box-shadow: var(--shadow-5);
   background-color: var(--black);
   width: 100%;
-  max-width: none;
+  max-width: 100%;
+  aspect-ratio: 16/9; 
+  margin-inline: auto;
+}
+.introVideoContainerFullwidth .videoWrapper[data-aspect-ratio="portrait"] {
+  aspect-ratio: 3/2; 
 }
 .introVideo {
   width: 100%;
-  height: auto;
-  min-height: 300px;
+  height: 100%;
   object-fit: cover;
   display: block;
   border-radius: 20px;
+  background-color: var(--black);
 }
 .introVideoContainerFullwidth .videoOverlay {
   position: absolute;
@@ -201,10 +207,7 @@
 @media (min-width: 768px) {
   .introVideoContainerFullwidth .videoWrapper {
     border-radius: 24px;
-  }
-  .introVideoContainerFullwidth .introVideo {
-    min-height: 400px;
-    border-radius: 24px;
+    max-width: 800px; 
   }
   .introVideoContainerFullwidth .playBtn {
     width: 100px;
@@ -214,20 +217,17 @@
 }
 
 @media (min-width: 992px) {
-  .introVideoContainer {
-    display: block;
-  }
-  .introVideoContainerFullwidth .introVideo {
-    min-height: 450px;
+  .introVideoContainerFullwidth .videoWrapper {
+    max-width: 900px;
   }
 }
 
 @media (min-width: 1200px) {
   .introHeader {
-    margin-block-end: 80px;
+    margin-block-end: 60px;
   }
-  .introVideoContainerFullwidth .introVideo {
-    min-height: 500px;
+  .introVideoContainerFullwidth .videoWrapper {
+    max-width: 1000px;
   }
   .introVideoContainerFullwidth .playBtn {
     width: 120px;

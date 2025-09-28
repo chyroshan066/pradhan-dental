@@ -10,9 +10,9 @@ export const MEDIA_ITEMS: MediaItem[] = [
     },
     {
         id: 2,
-        src: "/images/intro.webm",
-        alt: "Welcome to Pradhan Dental Clinic - Your Trusted Partner in Oral Health",
-        title: "Welcome to Pradhan Dental Clinic - Your Trusted Partner in Oral Health",
+        src: "/images/media/videos/v3.webm",
+        alt: "Advanced Dental Care at Pradhan Dental Clinic - Where Healthy Smiles Begin",
+        title: "Advanced Dental Care at Pradhan Dental Clinic - Where Healthy Smiles Begin",
         type: "video",
         // poster: "/images/gallery/v1-poster.webp" // Optional: thumbnail for the video
     },
@@ -102,9 +102,9 @@ export const MEDIA_ITEMS: MediaItem[] = [
     },
     {
         id: 15,
-        src: "/images/media/videos/v3.webm",
-        alt: "Advanced Dental Care at Pradhan Dental Clinic - Where Healthy Smiles Begin",
-        title: "Advanced Dental Care at Pradhan Dental Clinic - Where Healthy Smiles Begin",
+        src: "/images/intro.webm",
+        alt: "Welcome to Pradhan Dental Clinic - Your Trusted Partner in Oral Health",
+        title: "Welcome to Pradhan Dental Clinic - Your Trusted Partner in Oral Health",
         type: "video"
     },
     {

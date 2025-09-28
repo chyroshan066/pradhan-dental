@@ -9,13 +9,16 @@ interface IntroProps {
 }
 
 export const Intro = memo(({
-    videoUrl = "/images/intro.webm"
+    videoUrl = "/images/media/videos/v3.webm"
+
 }: IntroProps) => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [hasUserInteracted, setHasUserInteracted] = useState(false);
     const [videoDuration, setVideoDuration] = useState<string>('0:00');
+    const [aspectRatio, setAspectRatio] = useState<'portrait' | 'landscape'>('portrait');
     const videoRef = useRef<HTMLVideoElement>(null);
+    const videoWrapperRef = useRef<HTMLDivElement>(null);
 
     const formatDuration = (seconds: number): string => {
         const minutes = Math.floor(seconds / 60);
@@ -26,7 +29,19 @@ export const Intro = memo(({
     useEffect(() => {
         const handleLoadedMetadata = () => {
             if (videoRef.current) {
-                const duration = videoRef.current.duration;
+                const video = videoRef.current;
+                const videoAspectRatio = video.videoWidth / video.videoHeight;
+
+                // Determine if video is portrait or landscape
+                const detectedAspectRatio = videoAspectRatio < 1 ? 'portrait' : 'landscape';
+                setAspectRatio(detectedAspectRatio);
+
+                // Set data attribute on video wrapper
+                if (videoWrapperRef.current) {
+                    videoWrapperRef.current.setAttribute('data-aspect-ratio', detectedAspectRatio);
+                }
+
+                const duration = video.duration;
                 if (!isNaN(duration) && isFinite(duration)) {
                     setVideoDuration(formatDuration(duration));
                 }
@@ -48,7 +63,7 @@ export const Intro = memo(({
                 videoElement.removeEventListener('loadedmetadata', handleLoadedMetadata);
             }
         };
-    }, [videoUrl]); // Re-run when video URL changes
+    }, [videoUrl]);
 
     useEffect(() => {
         const playVideo = async () => {
@@ -129,7 +144,11 @@ export const Intro = memo(({
 
                     {/* Video Container */}
                     <div className={styles.introVideoContainerFullwidth}>
-                        <div className={styles.videoWrapper}>
+                        <div
+                            ref={videoWrapperRef}
+                            className={styles.videoWrapper}
+                            data-aspect-ratio={aspectRatio}
+                        >
                             <video
                                 ref={videoRef}
                                 className={styles.introVideo}
@@ -170,7 +189,7 @@ export const Intro = memo(({
                                         )}
                                     </button>
 
-                                    {/* Video Info Badge - Modified to use dynamic duration */}
+                                    {/* Video Info Badge */}
                                     <div className={styles.videoInfoBadge}>
                                         <div className={styles.badgeContent}>
                                             <span>{hasUserInteracted ? "Watch Demo" : "Click for Sound"}</span>
