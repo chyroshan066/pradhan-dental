@@ -1,16 +1,16 @@
-# Dr. Karuna Skin, Hair and Laser Treatment Center Website
+# Pradhan Dental Clinic Website
 
-A comprehensive, responsive dermatology clinic website built with Next.js and TypeScript, featuring online appointment booking, treatment showcases, patient testimonials, and seamless customer engagement tools designed to enhance the skincare and aesthetic treatment experience.
+A comprehensive, responsive dental website built with Next.js and TypeScript, featuring online appointment booking, service showcases, patient testimonials, and seamless customer engagement tools designed to enhance the dental practice experience.
 
 ## 🍽️ About
 
-Dr. Karuna Skin, Hair and Laser Treatment Center is a premium dermatology and aesthetic practice website designed to provide patients with an exceptional online experience. The site features elegant design and intuitive navigation to showcase comprehensive skin, hair, and laser treatments while facilitating seamless appointment booking.
+Pradhan Dental is a premium dental practice website designed to provide patients with an exceptional online experience. The site features elegant design and intuitive navigation to showcase comprehensive dental services and facilitate seamless appointment booking.
 
 ## ✨ Features
 
 - **Responsive Design** - Optimized for all devices (desktop, tablet, mobile)
 - **Online Appointments** - Easy appointment booking system with form validation
-- **Menu Showcase** - Beautiful presentation of dermatological and aesthetic services
+- **Menu Showcase** - Beautiful presentation of dental services
 - **Contact Information** - Easy-to-find location, hours, and contact details
 - **Performance Optimized** - Fast loading times and smooth user experience
 - **SEO Friendly** - Optimized for search engines and local discovery
@@ -68,7 +68,7 @@ npm run start
 ## 🏗️ Project Structure
 
 ```
-karuna-clinic/
+pradhan-dental/
 ├── .github/
 ├── public/
 │   ├── fonts/
@@ -91,7 +91,7 @@ karuna-clinic/
 ├── src/
 │   ├── app/
 │   │   ├── globals.css
-│   │   ├── layout.tsx
+│   │   ├── .....
 │   │   └── (pages)
 │   ├── components/
 │   │   ├── utility/
@@ -148,7 +148,7 @@ The website is fully responsive and tested on:
 
 ### Custom Domain Setup
 
-The website is configured for the custom domain `karunaskinclinic.com.np`:
+The website is configured for the custom domain `pradhandental.com`:
 
 1. DNS records are configured for the domain
 2. SSL certificates are automatically provisioned
@@ -178,7 +178,7 @@ npm run type-check
 
 - Meta tags
 - Open Graph support
-- Structured data for restaurant information
+- Structured data for clinic information
 - Local business schema markup
 - Sitemap generation
 
@@ -186,7 +186,7 @@ npm run type-check
 
 The website is deployed on Vercel with automatic deployments:
 
-- **Production**: https://karunaskinclinic.com.np
+- **Production**: https://pradhandental.com
 - **Preview**: Automatic preview deployments for pull requests
 
 ### Manual Deployment
@@ -199,8 +199,8 @@ npm run export  # if using static export
 ## 📞 Support & Maintenance
 
 ### Client Information
-- **Dermatology Clinic**: Dr. Karuna Skin, Hair and Laser Treatment Center
-- **Domain**: karunaskinclinic.com.np
+- **Dental Clinic**: Pradhan Dental
+- **Domain**: pradhandental.com
 - **Deployment**: Vercel
 
 ### Developer Contact
@@ -208,7 +208,7 @@ For technical support or website updates, contact the developer.
 
 ## 📝 License
 
-This project is proprietary software developed specifically for Dr. Karuna Skin, Hair and Laser Treatment Center.
+This project is proprietary software developed specifically for Pradhan Dental Clinic.
 
 ---
 

@@ -289,7 +289,7 @@ export const Appointment = memo(() => {
                         <div className={`separator ${styles.separator}`}></div>
                         <p className={`contact-label ${styles.contactLabel}`}>Location</p>
                         <address className={`body-4 ${styles.body4}`}>
-                            Aduwa Khola,  <br />
+                            Near Aduwa Khola Bridge hunch,  <br />
                             Birtamode, Nepal
                         </address>
                         <p className={`contact-label ${styles.contactLabel}`}>Daily</p>

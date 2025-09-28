@@ -7,6 +7,7 @@ import { Button } from "../utility/Button/Button";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./Header.module.css";
+import { CONTACTS } from "@/constants/contact-links";
 
 export const Header = memo(() => {
     const [isNavActive, setIsNavActive] = useState(false);
@@ -51,15 +52,22 @@ export const Header = memo(() => {
                             </a>
                         </li>
 
-                        <li className={styles.contactItem}>
-                            <IonIcon name="call-outline" />
-                            <a
-                                href="tel:+97723530874"
-                                className={styles.contactLink}
+                        {CONTACTS.map((contact, index) => (
+                            <li
+                                key={index}
+                                className={styles.contactItem}
                             >
-                                023-530874
-                            </a>
-                        </li>
+                                <IonIcon name={contact.ionIcon} />
+                                <a
+                                    href={contact.href}
+                                    className={styles.contactLink}
+                                    target="_blank"
+                                >
+                                    {contact.textNumber}
+                                </a>
+                            </li>
+                        ))}
+
                     </ul>
 
                     <ul className={styles.socialList}>

@@ -4,6 +4,7 @@ import { Link, Services } from "@/types";
 import { IonIcon } from "../utility/IonIcon";
 import { SocialLink } from "../utility/SocialLink";
 import styles from "./Footer.module.css";
+import { CONTACTS } from "@/constants/contact-links";
 
 interface FooterColumn {
     footerListTitle: string;
@@ -67,7 +68,7 @@ export const Footer = memo(() => (
                         </div>
                         <span className={styles.span}>
                             Sunday - Friday:<br />
-                            8:00 AM - 7:00 PM
+                            9:00 AM - 5:00 PM
                         </span>
                     </div>
 
@@ -91,22 +92,28 @@ export const Footer = memo(() => (
                             <IonIcon name="location-outline" />
                         </div>
                         <address className={styles.itemText}>
-                            Aduwa Khola, Birtamode <br />
-                            Jhapa, Nepal
+                            Near Aduwa Khola Bridge hunch <br />
+                            Birtamode, Jhapa, Nepal
                         </address>
                     </li>
 
-                    <li className={styles.footerItem}>
-                        <div className={styles.itemIcon}>
-                            <IonIcon name="call-outline" />
-                        </div>
-                        <a
-                            href="tel:+97723530874"
-                            className={styles.footerLink}
+                    {CONTACTS.map((contact, index) => (
+                        <li
+                            key={index}
+                            className={styles.footerItem}
                         >
-                            023-530874
-                        </a>
-                    </li>
+                            <div className={styles.itemIcon}>
+                                <IonIcon name={contact.ionIcon} />
+                            </div>
+                            <a
+                                href={contact.href}
+                                className={styles.footerLink}
+                                target="_blank"
+                            >
+                                {contact.textNumber}
+                            </a>
+                        </li>
+                    ))}
 
                     <li className={styles.footerItem}>
                         <div className={styles.itemIcon}>
@@ -127,7 +134,7 @@ export const Footer = memo(() => (
         <div className={styles.footerBottom}>
             <div className={styles.customContainer}>
                 <p className={styles.copyright}>
-                    &copy; 2025 All Rights Reserved by Dr. Karuna Skin Hair & Laser Center.
+                    &copy; 2025 All Rights Reserved by Pradhan Dental Clinic.
                 </p>
                 <ul className={styles.socialList}>
                     {SOCIALLINKS.map((link, index) => (

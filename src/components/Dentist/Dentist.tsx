@@ -40,6 +40,7 @@ const DentistCard = memo(({
                         <a
                             href={icon.ionIconLink}
                             className={styles.cardSocialLink}
+                            target="_blank"
                         >
                             <IonIcon name={icon.ionIconName}></IonIcon>
                         </a>

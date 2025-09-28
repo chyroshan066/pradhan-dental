@@ -48,3 +48,9 @@ export interface MediaItem {
   type: 'image' | 'video';
   poster?: string; // Optional thumbnail for videos
 }
+
+export interface Contact {
+    href: string;
+    ionIcon: string;
+    textNumber: string;
+}

@@ -73,7 +73,7 @@ const poppins = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Pradhan Dental - Advanced Dental Care in Biratnagar, Nepal",
+  title: "Pradhan Dental - Advanced Dental Care in Birtamode, Nepal",
   description: "Pradhan Dental offers comprehensive dental care in Birtamode, Nepal. Expert dentists providing treatments such as dental implants, braces, root canal therapy, cosmetic dentistry, teeth whitening, and preventive oral care in a modern, comfortable clinic.",
   keywords: [
     "Pradhan Dental",
@@ -150,7 +150,7 @@ export const metadata: Metadata = {
   },
   manifest: '/favicon_io/site.webmanifest',
   openGraph: {
-    title: "Pradhan Dental - Advanced Dental Care in Biratnagar, Nepal",
+    title: "Pradhan Dental - Advanced Dental Care in Birtamode, Nepal",
     description: "Expert dentists in Birtamode offering dental implants, braces, root canals, cosmetic dentistry, and preventive care in a modern, patient-friendly clinic.",
     type: "website",
     locale: "en_US",

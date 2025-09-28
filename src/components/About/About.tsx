@@ -4,7 +4,7 @@ import styles from "./About.module.css";
 
 export const About = memo(() => (
     <section
-        className={`section ${styles.about}`}
+        className={`section ${styles.about} -mt-50 md:-mt-40 lg:-mt-30`}
         id="about"
         aria-label="about"
     >

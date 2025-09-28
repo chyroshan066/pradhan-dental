@@ -4,14 +4,40 @@ import React, { memo } from 'react';
 import styles from "./Dentist.module.css";
 
 const TRAININGS: string[] = [
-    "Denatl implant",
-    "Orthodontics",
+    "MDS in Orthodontics(Braces)",
+    "Endodontic Rotary Hands on Training",
+    "NAM Training  for Clefts",
+    "TAD Training",
 ];
 
 const ABOUTTEXT: string[] = [
-    "JC Dr. Mukesh Kumar Shah is a distinguished orthodontist, social leader, and entrepreneur from Jhapa, Nepal. With a deep commitment to both his profession and community service, he has played a vital role in shaping dental healthcare and youth leadership in his region.",
-    "As a dedicated orthodontist, Dr. Shah runs *Pradhan Dental Clinic* in Birtamode, Jhapa, where he provides high-quality dental and orthodontic services. His clinic is known for its patient-centered approach, offering modern treatments that enhance both oral health and aesthetics."
+    "JC Dr. Mukesh Kumar Shah is a **Consultant Orthodontist (Braces and Aligner Specialist)**, social leader, and entrepreneur from Jhapa, Nepal. With a **Master of Dental Surgery (MDS)** and practicing in dental field as General Dentist since 2016 and as Consultant Orthodontist since 2022, he brings extensive experience and expertise to his practice. With a deep commitment to both his profession and community service, he has played a vital role in shaping dental healthcare and youth leadership in his region.",
+    "As a dedicated orthodontist, Dr. Shah runs Pradhan Dental Clinic in Birtamode, Jhapa, where he provides high-quality dental and orthodontic services. His clinic is known for its patient-centered approach, offering modern treatments that enhance both oral health and aesthetics."
 ];
+
+const processHighlightedText = (text: string) => {
+    const parts = text.split(/(\*\*.*?\*\*)/);
+    return parts.map((part, index) => {
+        if (part.startsWith('**') && part.endsWith('**')) {
+            const highlightedText = part.slice(2, -2);
+            return (
+                <span
+                    key={index}
+                    style={{
+                        background: 'linear-gradient(135deg, var(--bright-amber), var(--deep-golden-orange))',
+                        WebkitBackgroundClip: 'text',
+                        WebkitTextFillColor: 'transparent',
+                        fontWeight: '700',
+                        display: "inline",
+                    }}
+                >
+                    {highlightedText}
+                </span>
+            );
+        }
+        return part;
+    });
+};
 
 export const Dentist = memo(() => {
     return (
@@ -150,14 +176,22 @@ export const Dentist = memo(() => {
                                         marginBottom: '25px',
                                         boxShadow: '0 10px 30px rgba(0, 0, 0, 0.1)'
                                     }}>
-                                    <p style={{
-                                        color: 'var(--deep-orange-brown)',
-                                        fontWeight: '800',
-                                        fontSize: '1.6rem',
-                                        letterSpacing: '1px'
-                                    }}>
-                                        Master of Dental Surgery (MDS)
-                                    </p>
+                                    {[
+                                        "Master of Dental Surgery (MDS)",
+                                        "Bachelor of Dental Surgery (BDS)"
+                                    ].map((edu, index) => (
+                                        <p
+                                            key={index}
+                                            style={{
+                                                color: 'var(--deep-orange-brown)',
+                                                fontWeight: '800',
+                                                fontSize: '1.6rem',
+                                                letterSpacing: '1px'
+                                            }}
+                                        >
+                                            {edu}
+                                        </p>
+                                    ))}
                                 </div>
 
                                 <div
@@ -229,8 +263,9 @@ export const Dentist = memo(() => {
                                         lineHeight: '1.8',
                                         color: 'var(--warm-orange-taupe)',
                                         marginBottom: '30px'
-                                    }}>
-                                    {text}
+                                    }}
+                                >
+                                    {processHighlightedText(text)}
                                 </p>
                             ))}
 
@@ -487,7 +522,7 @@ export const Dentist = memo(() => {
                                         marginRight: '18px',
                                         flexShrink: '0'
                                     }}></span>
-                                    Hands On Training
+                                    Dental Implants Hands on Training
                                 </li>
                             </ul>
                         </div>

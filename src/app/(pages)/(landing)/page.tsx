@@ -2,6 +2,7 @@ import { About } from "@/components/About/About";
 import { Appointment } from "@/components/Appointment/Appointment";
 import { CallToAction } from "@/components/CallToAction/CallToAction";
 import { Dentist } from "@/components/Dentist/Dentist";
+import { Facility } from "@/components/Facility/Facility";
 import { Hero } from "@/components/Hero/Hero";
 import { Intro } from "@/components/Intro/Intro";
 import { Maps } from "@/components/Maps";
@@ -17,6 +18,7 @@ export default function Home() {
           <Hero />
           <Intro />
           <Service />
+          <Facility />
           <About />
           <Dentist />
           <CallToAction />
