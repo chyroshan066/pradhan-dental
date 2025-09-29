@@ -92,7 +92,7 @@ export const Footer = memo(() => (
                             <IonIcon name="location-outline" />
                         </div>
                         <address className={styles.itemText}>
-                            Near Aduwa Khola Bridge hunch <br />
+                            Near Aduwa Khola Bridge <br />
                             Birtamode, Jhapa, Nepal
                         </address>
                     </li>
