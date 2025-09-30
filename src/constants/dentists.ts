@@ -24,11 +24,11 @@ export const DENTISTS: DentistType[] = [
     {
         imgSrc: "/images/dentists/dentist-3.webp",
         name: "Nisita Gupta",
-        position: "",
+        position: "Dentist",
     },
     {
         imgSrc: "/images/dentists/dentist-4.webp",
         name: "Jitendra Khatri",
-        position: "",
+        position: "Dentist",
     },
 ];
