@@ -101,7 +101,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Pradhan Dental" }],
   creator: "Pradhan Dental",
   publisher: "Pradhan Dental",
-  metadataBase: new URL("https:///pradhandental.com"),
+  metadataBase: new URL("https://pradhandental.com"),
   alternates: {
     canonical: "/",
   },

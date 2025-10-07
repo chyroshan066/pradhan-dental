@@ -122,6 +122,7 @@ pradhan-dental/
 ├── postcss.config.mjs
 ├── tsconfig.json
 ├── vercel.json
+├── global.d.ts
 ├── LICENSE
 └── README.md
 ```
