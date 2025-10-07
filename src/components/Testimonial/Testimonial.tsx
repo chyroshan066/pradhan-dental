@@ -63,7 +63,7 @@ const TestimonialModal = memo(({
             onClick={onClose}
         >
             <div
-                className="relative w-full max-w-6xl max-h-[90vh] overflow-y-auto shadow-2xl transform transition-all duration-300 scale-100"
+                className="relative w-full max-w-7xl max-h-[90vh] overflow-y-auto shadow-2xl transform transition-all duration-300 scale-100"
                 style={{
                     backgroundColor: 'var(--white)',
                     borderRadius: 'var(--radius-6)',
@@ -462,7 +462,7 @@ export const TestimonialSlider = memo(() => {
                                 padding: '12px',
                                 boxShadow: 'var(--shadow-2)',
                                 transition: 'var(--transition)',
-                                zIndex: 10,
+                                zIndex: 3,
                                 border: 'none',
                                 cursor: 'pointer'
                             }}
@@ -492,7 +492,7 @@ export const TestimonialSlider = memo(() => {
                                 padding: '12px',
                                 boxShadow: 'var(--shadow-2)',
                                 transition: 'var(--transition)',
-                                zIndex: 10,
+                                zIndex: 3,
                                 border: 'none',
                                 cursor: 'pointer'
                             }}
@@ -506,7 +506,7 @@ export const TestimonialSlider = memo(() => {
                             }}
                             aria-label="Next testimonial"
                         >
-                            <CaretRightIcon size={32} />
+                            <CaretRightIcon size={24} />
                         </button>
                     </div>
 

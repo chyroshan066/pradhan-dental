@@ -1,14 +1,14 @@
 "use client";
 
-import { AppointmentFormData, SubscriptionFormData } from "@/middlewares/schema";
+import { AppointmentFormData } from "@/middlewares/schema";
 import { memo } from "react";
 import { UseFormRegister, UseFormRegisterReturn } from "react-hook-form";
 
 interface FormFieldProps {
-    id: keyof AppointmentFormData | keyof SubscriptionFormData;
+    id: keyof AppointmentFormData;
     placeholder?: string;
     type?: string;
-    register: UseFormRegister<AppointmentFormData | SubscriptionFormData> | UseFormRegisterReturn;
+    register: UseFormRegister<AppointmentFormData> | UseFormRegisterReturn;
     error?: string;
     disabled?: boolean;
     isTextarea?: boolean;
