@@ -22,7 +22,7 @@ interface AlertState {
 const initialValues: AppointmentFormData = {
     name: "",
     phone: "",
-    gender: "Male",
+    address: "Birtamode, Jhapa",
     date: "",
     time: "09:00am",
     message: "",
@@ -167,29 +167,16 @@ export const Appointment = memo(() => {
                             <div className="icon-wrapper">
 
                                 <IonIcon
-                                    name="person-outline"
+                                    name="location-outline"
                                     aria-hidden="true"
                                 />
 
-                                <select
-                                    {...register("gender")}
-                                    className="input-field"
-                                >
-                                    {["Male", "Female"].map((gender, index) => (
-                                        <option
-                                            key={index}
-                                            value={gender}
-                                        >
-                                            {gender}
-                                        </option>
-                                    ))}
-                                </select>
-
-                                <ErrorMessage message={errors.gender?.message} />
-
-                                <IonIcon
-                                    name="chevron-down"
-                                    aria-hidden="true"
+                                <InputField
+                                    id="address"
+                                    placeholder="Address"
+                                    register={register("address")}
+                                    error={errors.address?.message}
+                                    disabled={isSubmitting}
                                 />
 
                             </div>

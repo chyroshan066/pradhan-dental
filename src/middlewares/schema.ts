@@ -3,7 +3,7 @@ import z from "zod";
 export const AppointmentFormSchema = z.object({
     name: z.string().min(1, "Name is required"),
     phone: z.string().min(1, "Phone number is required").regex(/^[\d\s+-]+$/, "Enter valid number"),
-    gender: z.string().min(1, "Select your Gender"),
+    address: z.string().min(1, "Address is required"),
     date: z.string()
     .min(1, "Date is required")
     .refine((dateString) => {
@@ -57,9 +57,3 @@ export const AppointmentFormSchema = z.object({
 });
 
 export type AppointmentFormData = z.infer<typeof AppointmentFormSchema>;
-
-export const SubscriptionFormSchema = z.object({
-    email: z.string().min(1, "Email is required").email("Please enter a valid email address"),
-});
-
-export type SubscriptionFormData = z.infer<typeof SubscriptionFormSchema>;

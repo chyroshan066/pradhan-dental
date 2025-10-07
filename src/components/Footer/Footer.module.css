@@ -59,46 +59,6 @@
   font-weight: var(--weight-700);
   margin-block-end: 10px;
 }
-.footerLink {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  padding-block: 10px;
-  transition: var(--transition);
-  text-decoration: none;
-  color: inherit;
-}
-.footerLink ion-icon {
-  color: var(--deep-golden-orange);
-  --ionicon-stroke-width: 50px;
-}
-.footerLink:is(:hover, :focus) { 
-  color: var(--white); 
-}
-.footerItem {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.footerItem:not(:first-child) { 
-  margin-block-start: 20px; 
-}
-.itemIcon {
-  background-image: var(--gradient);
-  color: var(--white);
-  font-size: 18px;
-  padding: 11px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-.itemText { 
-  line-height: 1.6;
-  color: inherit;
-  text-decoration: none;
-}
 .footerBottom {
   background-color: var(--darkest-orange-brown);
   padding-block: 50px;

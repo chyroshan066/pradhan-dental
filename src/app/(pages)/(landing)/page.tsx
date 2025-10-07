@@ -16,6 +16,7 @@ export default function Home() {
       <main>
         <article>
           <Hero />
+          <Appointment />
           <Intro />
           <Service />
           <Facility />
@@ -24,7 +25,6 @@ export default function Home() {
           <CallToAction />
           <TestimonialSlider />
           <Review />
-          <Appointment />
           <Maps />
         </article>
       </main>

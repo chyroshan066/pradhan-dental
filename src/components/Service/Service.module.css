@@ -10,6 +10,7 @@
 .serviceList {
   display: grid;
   gap: 15px;
+  width: 100%;
 }
 .serviceCard {
   display: flex;
@@ -19,9 +20,12 @@
   border: 1px solid var(--light-peach-beige);
   border-radius: var(--radius-4);
   padding: 30px;
+  width: 100%;
+  box-sizing: border-box;
 }
 .serviceCard .cardIcon {
   width: 50px;
+  min-width: 50px;
   flex-shrink: 0;
 }
 .serviceCard .cardTitle { 
@@ -30,19 +34,43 @@
 
 @media (min-width: 768px) {
   .serviceList {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); /* Fix: Add minmax constraint */
     column-gap: 30px;
   }
 }
 
 @media (min-width: 992px) {
   .serviceList { 
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: 1fr minmax(0, 1fr) 1fr;
+    gap: 30px;
   }
   .serviceBanner {
     display: block;
-    grid-column: 2 / 3;  /* "grid-column" is shorthand for "grid-column-start" and "grid-column-end". Value 2 / 3 means: Start at the grid line 2 and End before the grid line 3 */
+    grid-column: 2 / 3;
     grid-row: 1 / 4;
     align-self: center;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 15px;
+  }
+  .serviceBanner figure {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  .serviceBanner img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+  }
+}
+
+@media (min-width: 1200px) {
+  .serviceList {
+    gap: 30px;
+  }
+  .serviceBanner figure {
+    max-width: 350px;
   }
 }
