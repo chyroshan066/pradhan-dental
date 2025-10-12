@@ -21,3 +21,5 @@ export const SocialIcon = memo(({
         ))}
     </ul>
 ));
+
+SocialIcon.displayName = "SocialIcon";

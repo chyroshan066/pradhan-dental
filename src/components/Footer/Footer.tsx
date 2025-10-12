@@ -1,5 +1,5 @@
 import { memo } from "react";
-import { NAVLINKS, SERVICES, SOCIALLINKS } from "@/constants";
+import { NAVLINKS, SERVICES } from "@/constants";
 import { Link, Services } from "@/types";
 import { IonIcon } from "../utility/IonIcon";
 import styles from "./Footer.module.css";
