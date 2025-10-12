@@ -1,10 +1,25 @@
-export interface Services {
-    id?: number;
-    imgSrc: string;
+interface Name {
     name: string;
+}
+
+interface Href {
+    href: string;
+}
+
+interface ImgSrc {
+    imgSrc: string;
+}
+
+interface Id {
+    id: number;
+}
+
+interface Text {
     text: string;
-    href?: string;
-    idStr: string;
+}
+
+interface Alt {
+    alt: string;
 }
 
 interface IonIcon {
@@ -12,49 +27,42 @@ interface IonIcon {
     ionIconLink: string;
 }
 
-export interface DentistType {
-    imgSrc: string;
-    name: string;
+export interface MediaDetails {
+    src: string;
+    title: string;
+}
+
+export interface Services extends Name, ImgSrc, Text {
+    id?: number;
+    href?: string;
+    idStr: string;
+}
+
+export interface DentistType extends Name, ImgSrc {
     ionIcon?: IonIcon[];
     position: string;
 }
 
-export interface Link {
-    name: string;
-    href: string;
-}
+export interface Link extends Name, Href {}
 
 export interface SocialLinkType extends Link {
     className: string;
 }
 
-export interface Testimonial {
-    id: number;
-    name: string;
+export interface Testimonial extends Name, Id, Text {
     rating: number;
-    text: string;
     image: string;
     position?: string;
 }
 
-export interface Photo {
-    id: number;
-    src: string;
-    alt: string;
-    title: string;
-}
+export interface Photo extends Id, MediaDetails, Alt {}
 
-export interface MediaItem {
-  id: number;
-  src: string;
-  alt: string;
-  title: string;
+export interface MediaItem extends Id, MediaDetails, Alt {
   type: 'image' | 'video';
   poster?: string; // Optional thumbnail for videos
 }
 
-export interface Contact {
-    href: string;
+export interface Contact extends Href {
     ionIcon: string;
     textNumber: string;
 }

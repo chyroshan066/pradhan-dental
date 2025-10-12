@@ -34,7 +34,7 @@
 
 @media (min-width: 768px) {
   .serviceList {
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); /* Fix: Add minmax constraint */
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); 
     column-gap: 30px;
   }
 }

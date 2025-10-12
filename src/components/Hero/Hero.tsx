@@ -1,11 +1,25 @@
 "use client";
 
-import Image from "next/image";
 import { memo } from "react";
 import styles from "./Hero.module.css";
 import { Button } from "../utility/Button/Button";
 import { ContactColumn } from "../utility/ContactColumn/ContactColumn";
 import { SocialIcon } from "../utility/SocialIcon/SocialIcon";
+import { HeroSlider } from "../HeroSlider";
+
+const HEROSLIDES: string[] = [
+    "/images/hero-banner.webp",
+    "/images/media/images/g1.webp",
+    "/images/media/images/g2.webp",
+    "/images/media/images/g3.webp",
+    "/images/media/images/g5.webp",
+    "/images/cta-banner.webp",
+    "/images/media/images/g4.webp",
+    "/images/media/images/g9.webp",
+    "/images/media/images/g6.webp",
+    "/images/media/images/g10.webp",
+    "/images/media/images/g11.webp",
+];
 
 export const Hero = memo(() => (
     <section
@@ -34,19 +48,11 @@ export const Hero = memo(() => (
                         btnText={"Book Appointment"}
                     />
                 </div>
-
             </div>
 
             <figure className={styles.heroBanner}>
-                <Image
-                    src="/images/hero-banner.webp"
-                    width={400}
-                    height={562}
-                    alt="hero banner"
-                    className="w-fill"
-                />
+                <HeroSlider slides={HEROSLIDES} />
             </figure>
-
         </div>
     </section>
 ));

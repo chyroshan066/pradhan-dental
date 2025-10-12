@@ -18,6 +18,18 @@
 .heroForm :global(.btn) { 
   width: 100%; 
 }
+.heroBanner {
+  position: relative;
+  height: 500px;
+  width: 100%;
+  margin-block-start: 30px;
+}
+.heroBanner > div {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+}
 
 @media (min-width: 768px) {
   .hero { 
@@ -41,5 +53,7 @@
   }
   .heroBanner { 
     margin-inline-end: -60px; 
+    height: 562px;
+    margin-block-start: 0;
   }
 }

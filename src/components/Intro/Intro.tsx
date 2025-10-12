@@ -3,15 +3,19 @@
 import { useState, useRef, memo, useEffect } from 'react';
 import { IonIcon } from '../utility/IonIcon';
 import styles from "./Intro.module.css";
+import { MediaDetails } from '@/types';
 
-interface IntroProps {
-    videoUrl?: string;
+interface VideoData extends MediaDetails {
+    id: string;
+    subtitle?: string;
+    description?: string;
 }
 
-export const Intro = memo(({
-    videoUrl = "/images/media/videos/v3.webm"
+interface IntroProps {
+    videos?: VideoData[];
+}
 
-}: IntroProps) => {
+const VideoPlayer = memo(({ video }: { video: VideoData }) => {
     const [isPlaying, setIsPlaying] = useState(false);
     const [isLoading, setIsLoading] = useState(false);
     const [hasUserInteracted, setHasUserInteracted] = useState(false);
@@ -29,8 +33,8 @@ export const Intro = memo(({
     useEffect(() => {
         const handleLoadedMetadata = () => {
             if (videoRef.current) {
-                const video = videoRef.current;
-                const videoAspectRatio = video.videoWidth / video.videoHeight;
+                const videoElement = videoRef.current;
+                const videoAspectRatio = videoElement.videoWidth / videoElement.videoHeight;
 
                 // Determine if video is portrait or landscape
                 const detectedAspectRatio = videoAspectRatio < 1 ? 'portrait' : 'landscape';
@@ -41,7 +45,7 @@ export const Intro = memo(({
                     videoWrapperRef.current.setAttribute('data-aspect-ratio', detectedAspectRatio);
                 }
 
-                const duration = video.duration;
+                const duration = videoElement.duration;
                 if (!isNaN(duration) && isFinite(duration)) {
                     setVideoDuration(formatDuration(duration));
                 }
@@ -63,7 +67,7 @@ export const Intro = memo(({
                 videoElement.removeEventListener('loadedmetadata', handleLoadedMetadata);
             }
         };
-    }, [videoUrl]);
+    }, [video.src]);
 
     useEffect(() => {
         const playVideo = async () => {
@@ -124,92 +128,126 @@ export const Intro = memo(({
     };
 
     return (
+        <div className={styles.introVideoContainerFullwidth}>
+            <div
+                ref={videoWrapperRef}
+                className={styles.videoWrapper}
+                data-aspect-ratio={aspectRatio}
+            >
+                <video
+                    ref={videoRef}
+                    className={styles.introVideo}
+                    onEnded={handleVideoEnded}
+                    onLoadStart={() => setIsLoading(true)}
+                    onCanPlay={() => setIsLoading(false)}
+                    onClick={handleVideoClick}
+                    controls={isPlaying && hasUserInteracted}
+                    preload="metadata"
+                    muted
+                    loop={!hasUserInteracted}
+                >
+                    <source
+                        src={video.src}
+                        type="video/webm"
+                    />
+                    Your browser does not support the video tag.
+                </video>
+
+                {/* Custom Play/Pause Overlay */}
+                {(!isPlaying || !hasUserInteracted) && (
+                    <div className={styles.videoOverlay}>
+                        <button
+                            className={styles.playBtn}
+                            onClick={handlePlayVideo}
+                            disabled={isLoading}
+                            aria-label={hasUserInteracted ? "Play promotional video" : "Play promotional video with sound"}
+                        >
+                            {isLoading ? (
+                                <div className={styles.loadingSpinner}>
+                                    <div className={styles.spinner}></div>
+                                </div>
+                            ) : (
+                                <IonIcon
+                                    name="play"
+                                    aria-hidden="true"
+                                />
+                            )}
+                        </button>
+
+                        {/* Video Info Badge */}
+                        <div className={styles.videoInfoBadge}>
+                            <div className={styles.badgeContent}>
+                                <span>{hasUserInteracted ? "Watch Demo" : "Click for Sound"}</span>
+                                <span className={styles.badgeDuration}>{videoDuration}</span>
+                            </div>
+                        </div>
+                    </div>
+                )}
+
+                {/* Decorative Elements */}
+                <div className={styles.videoDecoration}>
+                    <div className={styles.decorationDots}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+});
+
+VideoPlayer.displayName = "VideoPlayer";
+
+export const Intro = memo(({
+    videos = [
+        {
+            id: 'video-1',
+            src: '/images/media/videos/v3.webm',
+            title: 'Experience Excellence In',
+            subtitle: 'Our Story',
+            description: 'Watch our journey of providing world-class dental treatments with cutting-edge technology and compassionate care in the heart of Birtamode.'
+        },
+        {
+            id: 'video-2',
+            src: '/images/media/videos/v4.webm',
+            title: 'Advanced Dental Technology',
+        }
+    ]
+}: IntroProps) => {
+    return (
         <section
             className={`section ${styles.intro}`}
             id="intro"
         >
             <div className="custom-container">
                 <div className={styles.introContent}>
-                    {/* Section Header */}
-                    <div className={`text-center ${styles.introHeader}`}>
-                        <p className={`section-subtitle ${styles.sectionSubtitle}`}>Our Story</p>
-                        <h2 className={`h2 section-title ${styles.sectionTitle}`}>
-                            Experience Excellence In <br />
-                            Dental Care
-                        </h2>
-                        <p className={`section-text ${styles.sectionText}`}>
-                            Watch our journey of providing world-class dental treatments with cutting-edge technology and compassionate care in the heart of Birtamode.
-                        </p>
-                    </div>
-
-                    {/* Video Container */}
-                    <div className={styles.introVideoContainerFullwidth}>
-                        <div
-                            ref={videoWrapperRef}
-                            className={styles.videoWrapper}
-                            data-aspect-ratio={aspectRatio}
-                        >
-                            <video
-                                ref={videoRef}
-                                className={styles.introVideo}
-                                onEnded={handleVideoEnded}
-                                onLoadStart={() => setIsLoading(true)}
-                                onCanPlay={() => setIsLoading(false)}
-                                onClick={handleVideoClick}
-                                controls={isPlaying && hasUserInteracted}
-                                preload="metadata"
-                                muted
-                                loop={!hasUserInteracted}
-                            >
-                                <source
-                                    src={videoUrl}
-                                    type="video/webm"
-                                />
-                                Your browser does not support the video tag.
-                            </video>
-
-                            {/* Custom Play/Pause Overlay */}
-                            {(!isPlaying || !hasUserInteracted) && (
-                                <div className={styles.videoOverlay}>
-                                    <button
-                                        className={styles.playBtn}
-                                        onClick={handlePlayVideo}
-                                        disabled={isLoading}
-                                        aria-label={hasUserInteracted ? "Play promotional video" : "Play promotional video with sound"}
-                                    >
-                                        {isLoading ? (
-                                            <div className={styles.loadingSpinner}>
-                                                <div className={styles.spinner}></div>
-                                            </div>
-                                        ) : (
-                                            <IonIcon
-                                                name="play"
-                                                aria-hidden="true"
-                                            />
-                                        )}
-                                    </button>
-
-                                    {/* Video Info Badge */}
-                                    <div className={styles.videoInfoBadge}>
-                                        <div className={styles.badgeContent}>
-                                            <span>{hasUserInteracted ? "Watch Demo" : "Click for Sound"}</span>
-                                            <span className={styles.badgeDuration}>{videoDuration}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            )}
-
-                            {/* Decorative Elements */}
-                            <div className={styles.videoDecoration}>
-                                <div className={styles.decorationDots}>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
+                    {videos.length > 0 && (
+                        <>
+                            {/* Section Header*/}
+                            <div className={`text-center ${styles.introHeader}`}>
+                                <p className={`section-subtitle ${styles.sectionSubtitle}`}>
+                                    {videos[0].subtitle}
+                                </p>
+                                <h2 className={`h2 section-title ${styles.sectionTitle}`}>
+                                    {videos[0].title} <br />
+                                    Dental Care
+                                </h2>
+                                <p className={`section-text ${styles.sectionText}`}>
+                                    {videos[0].description}
+                                </p>
                             </div>
-                        </div>
 
-                    </div>
+                            {videos.map((video, index) => (
+                                <div
+                                    key={video.id}
+                                    style={{ marginTop: index > 0 ? '60px' : '0' }}
+                                >
+                                    <VideoPlayer video={video} />
+                                </div>
+                            ))}
+                        </>
+                    )}
                 </div>
             </div>
         </section>
