@@ -6,7 +6,7 @@ export const SOCIALLINKS: Link[] = [
         name: "logo-facebook",
     },
     {
-        href: "https://www.tiktok.com/search?q=Pradhan%20Dental&t=1758690321548",
+        href: "https://www.tiktok.com/@pradhan_dental",
         name: "logo-tiktok",
     },
 ];
