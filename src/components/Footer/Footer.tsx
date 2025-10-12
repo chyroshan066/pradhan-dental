@@ -2,9 +2,9 @@ import { memo } from "react";
 import { NAVLINKS, SERVICES, SOCIALLINKS } from "@/constants";
 import { Link, Services } from "@/types";
 import { IonIcon } from "../utility/IonIcon";
-import { SocialLink } from "../utility/SocialLink";
 import styles from "./Footer.module.css";
 import { ContactColumn } from "../utility/ContactColumn/ContactColumn";
+import { SocialIcon } from "../utility/SocialIcon/SocialIcon";
 
 interface FooterColumn {
     footerListTitle: string;
@@ -99,17 +99,13 @@ export const Footer = memo(() => (
                 <p className={styles.copyright}>
                     &copy; 2025 All Rights Reserved by Pradhan Dental Clinic.
                 </p>
-                <ul className={styles.socialList}>
-                    {SOCIALLINKS.map((link, index) => (
-                        <SocialLink
-                            key={index}
-                            href={link.href}
-                            name={link.name}
-                        />
-                    ))}
-                </ul>
+                <SocialIcon
+                    className="justify-center"
+                    linkClassName="text-[var(--white)] bg-[rgba(255, 255, 255, 0.2)]"
+                />
             </div>
         </div>
+
     </footer>
 ));
 

@@ -5,6 +5,7 @@ import { memo } from "react";
 import styles from "./Hero.module.css";
 import { Button } from "../utility/Button/Button";
 import { ContactColumn } from "../utility/ContactColumn/ContactColumn";
+import { SocialIcon } from "../utility/SocialIcon/SocialIcon";
 
 export const Hero = memo(() => (
     <section
@@ -22,6 +23,10 @@ export const Hero = memo(() => (
                 </p>
 
                 <ContactColumn />
+                <SocialIcon
+                    className="justify-start"
+                    linkClassName="text-[var(--deep-golden-orange)] mt-5"
+                />
 
                 <div className="inline-block w-full md:w-auto mt-10">
                     <Button

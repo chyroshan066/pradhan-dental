@@ -24,6 +24,10 @@ export interface Link {
     href: string;
 }
 
+export interface SocialLinkType extends Link {
+    className: string;
+}
+
 export interface Testimonial {
     id: number;
     name: string;

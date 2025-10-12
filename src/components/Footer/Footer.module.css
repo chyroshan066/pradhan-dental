@@ -69,30 +69,6 @@
   line-height: 1.6;
   margin-block-end: 25px;
 }
-.socialList {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 15px;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-.socialLink {
-  padding: 11px;
-  background-color: hsla(0, 0%, 100%, 0.2);
-  color: var(--white);
-  font-size: 18px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-decoration: none;
-  transition: var(--transition);
-}
-.socialLink:is(:hover, :focus) { 
-  background-image: var(--gradient); 
-}
 
 @media (min-width: 575px) {
   .customContainer {
