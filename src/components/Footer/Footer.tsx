@@ -67,7 +67,7 @@ export const Footer = memo(() => (
                             <IonIcon name="time-outline" />
                         </div>
                         <span className={styles.span}>
-                            Sunday - Friday:<br />
+                            Daily:<br />
                             9:00 AM - 5:00 PM
                         </span>
                     </div>

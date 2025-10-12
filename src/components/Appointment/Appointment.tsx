@@ -281,7 +281,7 @@ export const Appointment = memo(() => {
                         </address>
                         <p className={`contact-label ${styles.contactLabel}`}>Daily</p>
                         <p className={`body-4 ${styles.body4}`}>
-                            Sunday to Friday <br />
+                            {/* Sunday to Friday <br /> */}
                             9.00 am - 5.00pm
                         </p>
                     </div>
