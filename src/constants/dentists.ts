@@ -23,8 +23,8 @@ export const DENTISTS: DentistType[] = [
     },
     {
         imgSrc: "/images/dentists/dentist-3.webp",
-        name: "Nisita Gupta",
-        position: "Dentist",
+        name: "Nishita Gupta",
+        position: "Dental Surgeon",
     },
     {
         imgSrc: "/images/dentists/dentist-4.webp",

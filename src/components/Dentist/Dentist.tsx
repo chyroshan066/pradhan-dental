@@ -62,7 +62,7 @@ export const Dentist = memo(() => (
         <div className="custom-container">
 
             <TitleHeader
-                title={"Our Doctor"}
+                title={"Our Doctors"}
                 subTitle={"Best Expert Dentist"}
             />
 
