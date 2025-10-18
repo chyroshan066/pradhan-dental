@@ -20,7 +20,7 @@ const STATISTICS: Statistics[] = [
         subTitle: "Happy Patients",
     },
     {
-        title: "8+",
+        title: `${new Date().getFullYear() - 2017}+`,
         subTitle: "Years Experience",
     },
     {
