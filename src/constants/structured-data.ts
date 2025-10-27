@@ -100,7 +100,7 @@ export const dentalClinicStructuredData: DentalBusinessStructuredData = {
   "@type": "Dentist",
   "name": "Pradhan Dental", 
   "description": "Professional dental care services in Birtamode. Comprehensive oral health treatments including routine checkups, advanced procedures, orthodontics, and emergency dental care. Modern equipment, experienced dentists, and patient-focused approach.", 
-  "url": process.env.NEXT_PUBLIC_BASE_URL,
+  "url": "https://www.pradhandental.com",
   
   "address": {
     "@type": "PostalAddress",
@@ -142,7 +142,7 @@ export const dentalClinicStructuredData: DentalBusinessStructuredData = {
     "@type": "ScheduleAction",
     "target": {
       "@type": "EntryPoint",
-      "urlTemplate": `${process.env.NEXT_PUBLIC_BASE_URL}/#contact`
+      "urlTemplate": "https://www.pradhandental.com/#contact"
     },
     "result": {
       "@type": "Appointment",

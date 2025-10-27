@@ -6,11 +6,6 @@
         {
           "type": "host",
           "value": "pradhandental.com"
-        },
-        {
-          "type": "header",
-          "key": "x-forwarded-proto",
-          "value": "http"
         }
       ],
       "destination": "https://www.pradhandental.com/:path*",
