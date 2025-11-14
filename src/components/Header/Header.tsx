@@ -93,7 +93,7 @@ export const Header = memo(() => {
             >
                 <div className={`custom-container ${styles.customContainer}`}>
                     <Link
-                        href="#"
+                        href="/"
                         className={styles.logo}
                     >
                         <Image

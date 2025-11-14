@@ -43,9 +43,9 @@ export interface DentistType extends Name, ImgSrc {
     position: string;
 }
 
-export interface Link extends Name, Href {}
+export interface NavLink extends Name, Href {}
 
-export interface SocialLinkType extends Link {
+export interface SocialLinkType extends NavLink {
     className: string;
 }
 

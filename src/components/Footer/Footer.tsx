@@ -1,14 +1,15 @@
 import { memo } from "react";
 import { NAVLINKS, SERVICES } from "@/constants";
-import { Link, Services } from "@/types";
+import { NavLink, Services } from "@/types";
 import { IonIcon } from "../utility/IonIcon";
 import styles from "./Footer.module.css";
 import { ContactColumn } from "../utility/ContactColumn/ContactColumn";
 import { SocialIcon } from "../utility/SocialIcon/SocialIcon";
+import Link from "next/link";
 
 interface FooterColumn {
     footerListTitle: string;
-    list: Link[] | Services[];
+    list: NavLink[] | Services[];
 }
 
 const FOOTERCOLUMN: FooterColumn[] = [
@@ -32,13 +33,13 @@ const FooterColumn = memo(({
 
         {list.map((link, index) => (
             <li key={index}>
-                <a
+                <Link
                     href={link.href?.includes("#") ? link.href : `#${link.href}`}
                     className="footer-link"
                 >
                     <IonIcon name="add-outline" />
                     <span className={styles.span}>{link.name}</span>
-                </a>
+                </Link>
             </li>
         ))}
 
@@ -52,12 +53,12 @@ export const Footer = memo(() => (
         <div className={`${styles.section} ${styles.footerTop}`}>
             <div className={`${styles.customContainer} ${styles.customContainer}`}>
                 <div className={styles.footerBrand}>
-                    <a
-                        href="#"
+                    <Link
+                        href="/"
                         className={`${styles.logo}`}
                     >
                         Pradhan Dental
-                    </a>
+                    </Link>
                     <p className={styles.footerText}>
                         Your trusted <strong>dental clinic in Birtamode</strong> for <strong>dental implants</strong>, <strong>braces</strong>, <strong>cosmetic dentistry</strong>, <strong>root canal</strong>, <strong>teeth whitening</strong>, <strong>orthodontics</strong>, and <strong>family dental care</strong> at an affordable price. Visit <strong>Pradhan Dental Nepal</strong> for healthy smiles.
                     </p>

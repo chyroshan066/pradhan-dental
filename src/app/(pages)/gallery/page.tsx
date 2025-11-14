@@ -2,6 +2,8 @@ import { MEDIA_ITEMS } from '@/constants/gallery';
 import Gallery from './_components/Gallery/Gallery';
 import { Metadata } from 'next';
 
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+
 export const metadata: Metadata = {
   title: "Pradhan Dental Gallery - Modern Dental Clinic Facilities in Birtamode",
   description: "Explore Pradhan Dental's state-of-the-art facilities in Birtamode, Nepal. View our modern dental equipment, comfortable treatment rooms, sterilization facilities, and patient-friendly environment designed for quality dental care.",
@@ -52,11 +54,11 @@ export const metadata: Metadata = {
     description: "Take a virtual tour of Pradhan Dental's modern facilities in Birtamode. See our advanced dental equipment, comfortable treatment rooms, and patient-centered environment.",
     type: "website",
     locale: "en_US",
-    url: `${process.env.NEXT_PUBLIC_BASE_URL}/gallery`,
+    url: `${baseURL}/gallery`,
     siteName: "Pradhan Dental",
     images: [
       {
-        url: "/images/preview.webp",
+        url: `${baseURL}/images/preview.webp`,
         width: 1200,
         height: 630,
         alt: "Pradhan Dental Clinic Facilities and Equipment Gallery",
@@ -68,7 +70,7 @@ export const metadata: Metadata = {
     "twitter:card": "summary_large_image",
     "twitter:title": "Pradhan Dental Gallery - Modern Facilities",
     "twitter:description": "Explore our state-of-the-art dental facilities and equipment in Birtamode, Nepal",
-    "twitter:image": "/images/preview.webp",
+    "twitter:image": `${baseURL}/images/preview.webp`,
   },
   category: "health",
   classification: "Dental Clinic Gallery",

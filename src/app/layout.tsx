@@ -8,6 +8,8 @@ import { BackToTop } from "@/components/BackToTop/BackToTop";
 import { Footer } from "@/components/Footer/Footer";
 import { dentalServicesStructuredData, dentalClinicStructuredData, dentalSpecialtiesStructuredData } from "@/constants";
 
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+
 const roboto = localFont({
   src: [
     {
@@ -154,11 +156,11 @@ export const metadata: Metadata = {
     description: "Expert dentists in Birtamode offering dental implants, braces, root canals, cosmetic dentistry, and preventive care in a modern, patient-friendly clinic.",
     type: "website",
     locale: "en_US",
-    url: `${process.env.NEXT_PUBLIC_BASE_URL}`,
+    url: `${baseURL}`,
     siteName: "Pradhan Dental",
     images: [
       {
-        url: "/images/preview.webp",
+        url: `${baseURL}/images/preview.webp`,
         width: 1200,
         height: 630,
         alt: "Pradhan Dental Clinic Preview",

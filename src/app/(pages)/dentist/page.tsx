@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import { Dentist } from "./_components/Dentist/Dentist";
 
+const baseURL = process.env.NEXT_PUBLIC_BASE_URL;
+
 export const metadata: Metadata = {
     title: "Meet Dr. Mukesh Kumar Shah - Lead Dentist at Pradhan Dental",
     description: "Learn about Dr. Mukesh Kumar Shah, lead dentist at Pradhan Dental in Birtamode, Nepal. With 8+ years of experience in advanced dental care, specializing in dental implants, cosmetic dentistry, and comprehensive oral health treatments.",
@@ -51,11 +53,11 @@ export const metadata: Metadata = {
         description: "Discover the expertise and qualifications of Dr. Mukesh Kumar Shah, our lead dentist with 8+ years of experience in advanced dental care, serving patients in Birtamode and surrounding areas.",
         type: "profile",
         locale: "en_US",
-        url: `${process.env.NEXT_PUBLIC_BASE_URL}/dentist`,
+        url: `${baseURL}/dentist`,
         siteName: "Pradhan Dental",
         images: [
             {
-                url: "/images/cta-baner.webp",
+                url: `${baseURL}/images/cta-baner.webp`,
                 width: 1200,
                 height: 630,
                 alt: "Dr. Mukesh Kumar Shah - Lead Dentist at Pradhan Dental",
