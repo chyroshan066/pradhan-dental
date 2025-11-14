@@ -1,5 +1,5 @@
 import "./globals.css"
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import IonicScripts from "@/utils/IonicScripts";
 import AnalyticsWrapper from "@/utils/AnalyticsWrapper";
@@ -172,11 +172,12 @@ export const metadata: Metadata = {
   referrer: "origin-when-cross-origin",
   applicationName: "BiratCity Dental",
   generator: "Next.js",
-  viewport: {
-    width: 'device-width',
-    initialScale: 1,
-    maximumScale: 1,
-  },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
 };
 
 export default function RootLayout({
