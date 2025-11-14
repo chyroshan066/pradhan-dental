@@ -32,9 +32,8 @@ export interface MediaDetails {
     title: string;
 }
 
-export interface Services extends Name, ImgSrc, Text {
+export interface Services extends Name, ImgSrc, Text, Href {
     id?: number;
-    href?: string;
     idStr: string;
 }
 

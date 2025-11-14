@@ -34,7 +34,7 @@ const FooterColumn = memo(({
         {list.map((link, index) => (
             <li key={index}>
                 <Link
-                    href={link.href?.includes("#") ? link.href : `#${link.href}`}
+                    href={link.href}
                     className="footer-link"
                 >
                     <IonIcon name="add-outline" />
