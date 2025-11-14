@@ -6,7 +6,7 @@ import { TitleHeader } from "../utility/TitleHeader";
 import styles from "./Service.module.css";
 
 const ServiceCard = memo(({
-    imgSrc, name, text, idStr
+    imgSrc, name, text, idStr, href
 }: Services) => (
     <li id={idStr}>
         <div className={styles.serviceCard}>
@@ -56,6 +56,7 @@ export const Service = memo(() => (
                             name={service.name}
                             text={service.text}
                             idStr={service.idStr}
+                            href={service.href}
                         />
                     ))
                 }
@@ -82,6 +83,7 @@ export const Service = memo(() => (
                             name={service.name}
                             text={service.text}
                             idStr={service.idStr}
+                            href={service.href}
                         />
                     ))
                 }
@@ -95,6 +97,7 @@ export const Service = memo(() => (
                             name={service.name}
                             text={service.text}
                             idStr={service.idStr}
+                            href={service.href}
                         />
                     ))
                 }
@@ -108,6 +111,7 @@ export const Service = memo(() => (
                             name={service.name}
                             text={service.text}
                             idStr={service.idStr}
+                            href={service.href}
                         />
                     ))
                 }
@@ -121,6 +125,7 @@ export const Service = memo(() => (
                             name={service.name}
                             text={service.text}
                             idStr={service.idStr}
+                            href={service.href}
                         />
                     ))
                 }
